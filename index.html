@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Borja</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--Preheader-->
+    <div class="preheader">
+        <div class="preheader-nav">
+            <ul>
+                <li>
+                    <!-- Sección del selector de idioma -->
+                    <div class="language-dropdown">
+                        <select id="language-selector">
+                            <option value="es">Español</option>
+                            <option value="en">English</option>
+                        </select>
+                    </div>
+                </li>
+                <li>
+                    <div class="preheader-telephone-button">Tel. 966666666</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contenedor del logo y menú -->
+    <div class="header">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo"> <!-- Coloca aquí la ruta de tu logo -->
+        </div>
+        
+        <!-- Menú de navegación -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="hotel.html">El hotel</a></li>
+                <li><a href="localidad.html">Localidad</a></li>
+                <li><a href="habitaciones.html">Habitaciones</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container-bienvenida">
+        <div class="container-saludo">
+            <h1>Bienvenidos al hotel Borja</h1>
+            <div class="sep-line"></div>
+            <p>
+                Tu estancia en nuestro alojamiento está a un click
+            </p>
+        </div>
+        <div class="reserva">
+            <div class="container-reserva">
+                <div class="fechas-reserva">
+                    <div class="fecha-llegada">
+                        <label for="checkin">Llegada</label>
+                        <input type="date" id="checkin">
+                    </div>
+                    <div class="fecha-salida">
+                        <label for="checkout">Salida</label>
+                        <input type="date" id="checkout">
+                    </div>
+                </div>
+                <div class="personas-reserva">
+                    <div class="adultos">
+                        <label for="adults">Adultos:</label>
+                        <input type="number" id="adults" min="1" value="1">
+                    </div>
+                    <div class="menores">
+                        <label for="children">Niños:</label>
+                        <input type="number" id="children" min="0" value="0">
+                    </div>
+                </div>
+                <!--<button onclick="submitReservation()">Reservar</button>-->
+                <div class="button-reservar" onclick="checkAvailability()">Comprobar disponibilidad</div>
+                </div> 
+        </div>
+    </div>
+    <!-- Contenido principal -->
+    <div class="container">
+        <div class="caracteristicas">
+            <div id="short-hotel" class="short-desc-container">
+                <div class="short-desc">
+                    <h1>Un hotel con historia</h1>
+                    <div class="sep-line"></div>
+                    <p>
+                        Un hotel cómodo, agradable y tranquilo, enclavado en un entorno pacífico como es el caso antiguo de El Puig. 
+                    </p>
+                    <p>
+                        De marcado carácter familiar, en el nuestro hotel nos especializamos en hacer de la estancia una experiencia inmejorable.
+                    </p>
+                    <div class="sep-line"></div>
+                    <div class="button-saber-mas">Acerca del hotel</div>
+                </div>
+                <div class="short-pic">
+                    <img src="img/hotel.jpg" alt="Logo">
+                </div>
+            </div>
+            <div class="short-desc-container">
+                <div class="short-pic">
+                    <img src="img/monasterio.jpg" alt="Logo">
+                </div>
+                <div class="short-desc">
+                    <h1>Entorno acogedor</h1>
+                    <div class="sep-line"></div>
+                    <p>
+                        Calles antiguas, cercanía con el mar y monumentos históricos. la lista para las vacaciones perfectas.
+                    </p>
+                    <p>
+                        El Puig tiene una gran cantidad de experiencias que ofrecer, además la cercanía con Valencia y el mar hacen de este un lugar ideal para el descanso.
+                    </p>
+                    <div class="sep-line"></div>
+                    <div class="button-saber-mas">El Puig y alrededores</div>
+                </div>
+            </div> 
+            <div id="short-localidad" class="short-desc-container">
+                <div  class="short-desc">
+                    <h1>Descansa tranquilamente</h1>
+                    <div class="sep-line"></div>
+                    <p>
+                        Nuestro hotel-residencia cuenta con una amplia variedad de habitaciones. Seguro que hay una de su agrado
+                    </p>
+                    <p>
+                        Todas nuestras habitaciones cuentan con servicios dispuestos a su conveniencia.
+                    </p>
+                    <div class="sep-line"></div>
+                    <div class="button-saber-mas">Las habitaciones</div>
+                </div>
+                <div class="short-pic">
+                    <img src="img/habitacion.jpg" alt="Logo">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-nav">
+                <h3>Sobre nosotros</h3>
+                <div class="sep-line-footer"></div>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="hotel.html">El hotel</a></li>
+                    <li><a href="localidad.html">Localidad</a></li>
+                    <li><a href="habitaciones.html">Habitaciones</a></li>
+                </ul>
+            </div>
+            <div class="footer-contacto">
+                <h3>Encuéntranos</h3>
+                <div class="sep-line-footer"></div>
+                <ul>
+                    <li><div class="footer-contacto-element"><img><div>Carrer del progrés, El Puig de Santa Maria, Valencia, España</div></div></li>
+                    <li><div class="footer-contacto-element"><img><div>Tel. 96666666</div></div></li>
+                    <li><div class="footer-contacto-element"><img><div>correo@hotelborja.es</div></div></li>
+                </ul>
+            </div>
+            <div class="footer-bio">
+                <h3>Hotel Borja</h3>
+                <div class="sep-line-footer"></div>
+                <p>
+                    Siéntete como en casa en nuestro hotel, envuelto en un entorno acogedor repleto de lugares en los que crear anécdotas y recuerdos
+                </p>
+            </div>
+        </div>
+        <p>&copy; 2024 Hotel Borja. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

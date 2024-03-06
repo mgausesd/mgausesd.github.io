@@ -1,0 +1,378 @@
+
+body{
+    
+}
+.reserva
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-bienvenida
+{
+    background-image: url("img/monasterio.jpg") ;
+    background-color: #cccccc;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.container-saludo
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container-reserva {
+    max-width: 75%;
+    margin: 10%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fechas-reserva
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 2px solid #ccc;
+    margin-bottom: 5pt;
+    margin-top: 10pt;
+    min-width: 90%;
+    max-width: 90%;
+}
+
+.fecha-salida, .fecha-llegada
+{
+    min-width: 45%;
+    max-width: 45%;
+    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.personas-reserva
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 2px solid #ccc;
+    margin-bottom: 5pt;
+    min-width: 90%;
+    max-width: 90%;
+}
+
+.adultos, .menores
+{
+    min-width: 45%;
+    max-width: 45%;
+    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+  
+label {
+    font-size: 18pt;
+    display: block;
+    margin-bottom: 5px;
+    color: #ccc;
+}
+
+input {
+    font-size: 22pt;
+    width: calc(100% - 10px);
+    margin-bottom: 10px;
+    height: 35pt;
+    border: none;
+}
+
+input:focus {
+    font-size: 18pt;
+    width: calc(100% - 10px);
+    margin-bottom: 10px;
+    height: 35pt;
+    border: none;
+    outline: none;
+}
+.button-reservar {
+    min-width: 83%;
+    max-width: 83%;
+    padding: 15pt;
+    background-color: #d1c05c;
+    border: 2px solid #d1c05c;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 10pt;
+    text-align: center;
+}
+
+.button-reservar:hover {
+    background-color: #fff;
+    color: #d1c05c;
+    border: 2px solid #d1c05c;
+    cursor: pointer;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8; /* Color de fondo blanco */
+    color: #333; /* Color de texto */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del preheader */
+.preheader
+{
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Estilos del menú de navegación */
+.preheader-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.preheader-nav ul li {
+    margin-left: 0px; /* Ajuste el margen izquierdo */
+}
+
+.preheader-nav ul li:last-child {
+    margin-right: 0;
+}
+
+.preheader-telephone-button
+{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background-color: #d1c05c;
+    margin: 0pt;
+    min-height: 50px;
+    padding-left: 10pt;
+    padding-right: 10pt;
+}
+
+.preheader-telephone-button:hover
+{
+    background-color: #fff;
+    color: #d1c05c;
+    cursor: pointer;
+}
+
+/* Estilos del dropdown de idioma */
+.language-dropdown {
+    border-left: 1px solid #ccc; /* Borde izquierdo */
+    border-right: 1px solid #ccc; /* Borde derecho */
+    max-width: 75pt;
+    margin: 0pt;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    padding-left: 10pt;
+    padding-right: 10pt;
+}
+
+.language-dropdown select {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* Estilos del header */
+.header {
+    background-color: #fff; /* Nuevo color de fondo blanco */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra inferior */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc; /* Borde inferior */
+}
+
+
+
+/* Estilos del menú de navegación */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 50px; /* Ajuste el margen izquierdo */
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333; /* Color de texto */
+}
+
+nav ul li a:hover {
+    color: #d1c05c; /* Nuevo color dorado */
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para el contenido */
+h1, h2, h3 {
+    color: #333; /* Color de texto */
+    text-align: center;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #d1c05c; /* Nuevo color dorado */
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo img
+{
+    max-height: 75pt;
+}
+.short-desc
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding:20pt;
+    background-color: #fff;
+}
+.sep-line
+{
+    width: 50px;
+    border-bottom: 2px solid #d1c05c;
+}
+.button-saber-mas
+{
+    width: 120pt;
+    min-height: 50pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 25pt;
+    border: 2px solid #d1c05c;
+    color: #fff;
+    background-color: #d1c05c;
+}
+.button-saber-mas:hover
+{
+    border: 2px solid #d1c05c;
+    color: #d1c05c;
+    background-color: #fff;
+}
+.caracteristicas
+{
+    display: flex;
+    flex-direction: column;
+}
+.short-desc-container
+{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    max-height: 25%;
+    min-width: 40%;
+}
+.short-pic
+{
+    max-width: 60%;
+    min-width: 60%;
+    margin: 0;
+    padding: 0;
+}
+.short-pic img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+.short-pic img:hover
+{
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+}
+
+.footer-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 75%;
+    font-size: 16pt;
+}
+
+.footer-nav, .footer-contacto, .footer-bio
+{
+    margin-left: 5%;
+
+}
+
+/* Estilos del menú de navegación */
+.footer-nav ul, .footer-contacto ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 16pt;
+}
+
+.footer-nav ul li, .footer-contacto ul li {
+    color: #fff; /* Color de texto */
+    margin-bottom: 10%;
+}
+
+.footer-nav ul li:last-child, .footer-contacto ul li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav ul li a, .footer-contacto ul li a {
+    text-decoration: none;
+    color: #fff; /* Color de texto */
+    height: 50pt;
+}
+
+.footer-nav ul li a:hover, .footer-contacto ul li a:hover{
+    color: #333; /* Nuevo color dorado */
+}
+
+.footer-container h3
+{
+    text-align: left;
+}

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Borja</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--Preheader-->
+    <div class="top">
+        <div class="preheader">
+            <div class="preheader-nav">
+                <ul>
+                    <li>
+                        <!-- Sección del selector de idioma -->
+                        <div class="language-dropdown">
+                            <select id="language-select" onchange="changeLanguage()">
+                                <option value="es">Español</option>
+                                <option value="en">English</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="preheader-telephone-button"><img class="icon-pic" src="img/telefono.png" alt="telefono">+34 96 147 09 81</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Contenedor del logo y menú -->
+        <div class="header">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo"> <!-- Coloca aquí la ruta de tu logo -->
+            </div>
+            <button id="boton-menu" class="boton-menu" onclick="onClickMenuButton()">
+                <img class="boton-menu-icono" src="img/icono-menu.png" alt="icono">
+            </button>
+            <!-- Menú de navegación -->
+            <nav>
+                <ul id="nav-links">
+                    <li><a href="index.html" data-text-key="inicio">Inicio</a></li>
+                    <li><a href="hotel.html" data-text-key="elhotel">El hotel</a></li>
+                    <li><a href="localidad.html" data-text-key="localidad">Localidad</a></li>
+                    <li><a href="habitaciones.html" data-text-key="habitaciones">Habitaciones</a></li>
+                    <li><a href="contacto.html" data-text-key="contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="mini-nav" class="mini-nav">
+            <ul id="nav-links">
+                <li><a href="index.html" data-text-key="inicio">Inicio</a></li>
+                <li><a href="hotel.html" data-text-key="elhotel">El hotel</a></li>
+                <li><a href="localidad.html" data-text-key="localidad">Localidad</a></li>
+                <li><a href="habitaciones.html" data-text-key="habitaciones">Habitaciones</a></li>
+                <li><a href="contacto.html" data-text-key="contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="middle">
+        <!-- Contenido principal -->
+        <div class="contenido-contacto">
+            <div class="top-contenido-contacto">
+
+            </div>
+            <div class="formularios">
+                <div class="seccion-titulo">
+                    <h1 class="servicios-item-titulo" data-text-key="seccion-titulo-contacto">
+                        ¿En qué podemos ayudarte?
+                    </h1>
+                </div>
+                <div class="sep-line"></div>
+                <div id="tipo-formulario-contacto-switch" class="switch-formularios">
+                    <div onclick="switchContactoClicked(this.id)" id="boton-switch-formulario-reservar" class="boton-switch-formulario-reservar">
+                        Quiero reservar
+                    </div>
+                    <div onclick="switchContactoClicked(this.id)" id="boton-switch-formulario-otros" class="boton-switch-formulario-otros">
+                        Otras cuestiones
+                    </div>
+                </div>
+                <div class="sep-line"></div>
+                <div id="formulario-contacto" class="formulario-contacto">
+                    <h2 data-text-key="seccion-titulo-formulario-reserva-datos-visita">
+                        Datos de contacto
+                    </h2>
+                    <div class="sep-line"></div>
+                    <div class="formulario-reserva-datos-contacto">
+                        <div class="formulario-reserva-nombre-apellidos">
+                            <div id="formulario-reserva-nombre" class="formulario-reserva-device">
+                                <label for="formulario-reserva-nombre-label">
+                                    Nombre
+                                    <span style="color:red">*</span>
+                                </label>
+                                <input id="formulario-reserva-nombre-input">
+                            </div>
+                            <div id="formulario-reserva-apellidos" class="formulario-reserva-device">
+                                <label id="formulario-reserva-apellidos-label">
+                                    Apellidos
+                                    <span style="color:red">*</span>
+                                </label>
+                                <input id="formulario-reserva-apellidos-input">
+                            </div>
+                        </div>
+                        <div class="formulario-reserva-correo-telefono">
+                            <div id="formulario-reserva-correo" class="formulario-reserva-device">
+                                <label for="formulario-reserva-correo-label">
+                                    Correo electrónico
+                                    <span style="color:red">*</span>
+                                </label>
+                                <input id="formulario-reserva-correo-input">
+                            </div>
+                            <div id="formulario-reserva-telefono" class="formulario-reserva-device">
+                                <label id="formulario-reserva-telefono-label">
+                                    Teléfono
+                                </label>
+                                <input id="formulario-reserva-telefono-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sep-line"></div>
+                    <div onclick=""  data-text-key="solicitar-contacto-button" class="button-saber-mas">Contactar</div>
+                </div>
+                <div id="formulario-reserva" class="formulario-reserva">
+                    <h2 data-text-key="seccion-titulo-formulario-reserva-datos-visita">
+                        Datos de la reserva
+                    </h2>
+                    <div class="sep-line"></div>
+                    <div class="formulario-reserva-datos-visita">
+                        <div class="formulario-reserva-fechas">
+                            <div id="formulario-reserva-llegada" class="formulario-reserva-device">
+                                <label for="formulario-reserva-llegada-label">
+                                    Llegada
+                                    <span style="color:red">*</span>
+                                </label>
+                                <input class="formulario-reserva-llegada-input" type="date">
+                            </div>
+                            <div id="formulario-reserva-salida" class="formulario-reserva-device">
+                                <label for="formulario-reserva-salida-label">
+                                    Salida
+                                    <span style="color:red">*</span>
+                                </label>
+                                <input class="formulario-reserva-salida-input" type="date">
+                            </div>
+                        </div>
+                        <div class="formulario-reserva-huespedes">
+                            <div id="formulario-reserva-adultos" class="formulario-reserva-device">
+                                <label for="formulario-reserva-adultos-label">
+                                    Adultos
+                                    <span style="color:red">*</span>
+                                </label>
+                                <input id="formulario-reserva-adultos-input" type="number" min="1" max="10" value="1">
+                            </div>
+                            <div id="formulario-reserva-menores" class="formulario-reserva-device">
+                                <label for="formulario-reserva-menores-label">
+                                    Niños
+                                </label>
+                                <input id="formulario-reserva-menores-input" type="number" min="0" max="10" value="0">
+                            </div>
+                            <div class="formulario-reserva-mascotas">
+                                <label for="formulario-reserva-mascotas-label">
+                                    Mascotas
+                                </label>
+                                <input id="formulario-reserva-mascotas-input" type="checkbox">
+                            </div>
+                        </div>
+                        <div class="formulario-reserva-habitaciones">
+                            <div id="formulario-reserva-habitaciones-doble" class="formulario-reserva-device">
+                                <label for="formulario-reserva-habitaciones-doble-label">
+                                    Doble
+                                </label>
+                                <input id="formulario-reserva-habitaciones-doble-input" type="number" min="0" max="10" value="0">
+                            </div>
+                            <div id="formulario-reserva-habitaciones-simple" class="formulario-reserva-device">
+                                <label for="formulario-reserva-habitaciones-simple-label">
+                                    Individual
+                                </label>
+                                <input id="formulario-reserva-habitaciones-simple-input" type="number" min="0" max="10" value="0">
+                            </div>
+                            <div id="formulario-reserva-habitaciones-triple" class="formulario-reserva-device">
+                                <label for="formulario-reserva-habitaciones-triple-label">
+                                    Triple
+                                </label>
+                                <input id="formulario-reserva-habitaciones-triple-input" type="number" min="0" max="10" value="0">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sep-line"></div>
+                    <h2 data-text-key="seccion-titulo-formulario-reserva-datos-visita">
+                        Datos de contacto
+                    </h2>
+                    <div class="sep-line"></div>
+                    <div class="formulario-reserva-datos-contacto">
+                        <div class="formulario-reserva-nombre-apellidos">
+                            <div id="formulario-reserva-nombre" class="formulario-reserva-device">
+                                <label for="formulario-reserva-nombre-label">
+                                    Nombre
+                                    <span style="color:red">*</span>
+                                </label>
+                                <input id="formulario-reserva-nombre-input">
+                            </div>
+                            <div id="formulario-reserva-apellidos" class="formulario-reserva-device">
+                                <label id="formulario-reserva-apellidos-label">
+                                    Apellidos
+                                    <span style="color:red">*</span>
+                                </label>
+                                <input id="formulario-reserva-apellidos-input">
+                            </div>
+                        </div>
+                        <div class="formulario-reserva-correo-telefono">
+                            <div id="formulario-reserva-correo" class="formulario-reserva-device">
+                                <label for="formulario-reserva-correo-label">
+                                    Correo electrónico
+                                    <span style="color:red">*</span>
+                                </label>
+                                <input id="formulario-reserva-correo-input">
+                            </div>
+                            <div id="formulario-reserva-telefono" class="formulario-reserva-device">
+                                <label id="formulario-reserva-telefono-label">
+                                    Teléfono
+                                </label>
+                                <input id="formulario-reserva-telefono-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sep-line"></div>
+                    <div onclick=""  data-text-key="solicitar-reserva-button" class="button-saber-mas">Solicitar reserva</div>
+                </div>
+                <div class="formulario-contacto">
+
+                </div>
+            </div>
+
+            <div class="ubicacion">
+                <div class="seccion-titulo">
+                    <h1 class="servicios-item-titulo" data-text-key="seccion-titulo-contacto">
+                        Dónde estamos
+                    </h1>
+                </div>
+                <div class="sep-line"></div>
+                <div class="mapa">
+                    <iframe class="mapa-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3074.7037832042165!2d-0.3024431248052221!3d39.58882587158469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6040a00f4110af%3A0x6e902e475ca815c6!2sHotel%20Residencia%20Borja!5e0!3m2!1ses!2ses!4v1709922322041!5m2!1ses!2ses"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pie de página -->
+    <footer>
+        <div id="footer-container" class="footer-container">
+            <div id="footer-nav" class="footer-nav">
+                <h3 data-text-key="sobre-nosotros">Sobre nosotros</h3>
+                <div class="sep-line-footer"></div>
+                <ul>
+                    <li><a href="index.html" data-text-key="inicio">Inicio</a></li>
+                    <li><a href="hotel.html" data-text-key="elhotel">El hotel</a></li>
+                    <li><a href="localidad.html" data-text-key="localidad">Localidad</a></li>
+                    <li><a href="habitaciones.html" data-text-key="habitaciones">Habitaciones</a></li>
+                </ul>
+            </div>
+            <div id="footer-contacto" class="footer-contacto">
+                <h3 data-text-key="encuentranos">Encuéntranos</h3>
+                <div class="sep-line-footer"></div>
+                <ul>
+                    <li><div class="footer-contacto-element"><img class="icon-pic" src="img/ubicación.png" alt="ubicacion"><div>Carrer del progrés 35, 46540 El Puig, Valencia, España</div></div></li>
+                    <li><div class="footer-contacto-element"><img class="icon-pic" src="img/telefono.png" alt="telefono"><div>+34 96 147 09 81</div></div></li>
+                    <li><div class="footer-contacto-element"><img class="icon-pic" src="img/correo.png" alt="correo"><div>correo@hotelborja.es</div></div></li>
+                </ul>
+            </div>
+            <div id="footer-bio" class="footer-bio">
+                <h3 data-text-key="footer-hotel-borja">Hotel Borja</h3>
+                <div class="sep-line-footer"></div>
+                <p data-text-key="footer-bio">
+                    Siéntete como en casa en nuestro hotel, envuelto en un entorno acogedor repleto de lugares en los que crear anécdotas y recuerdos
+                </p>
+            </div>
+        </div>
+        <div class="footer-legal">
+            <div class="sub-footer-legal">
+                <span class="copyright" data-text-key="copyright">&copy; 2024 Hotel Borja. Todos los derechos reservados.</span>
+                <a href="legal.html" data-text-key="legal" class="footer-legal-element">Aviso legal</a>
+                <a href="cookies.html" data-text-key="cookies" class="footer-legal-element">Inicio</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

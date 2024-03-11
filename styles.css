@@ -1,128 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
 
-body{
-    
-}
-.reserva
+/* || Ajustes por defecto */
+p
 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-family: "Syne", sans-serif;
 }
 
-.container-bienvenida
+h1
 {
-    background-image: url("img/monasterio.jpg") ;
-    background-color: #cccccc;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    font-family: "Syne", sans-serif;
 }
 
-.container-saludo
+h1, h2, h3 
 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    color: #333; /* Color de texto */
     text-align: center;
 }
 
-.container-reserva {
-    max-width: 75%;
-    margin: 10%;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.fechas-reserva
+div
 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    border: 2px solid #ccc;
-    margin-bottom: 5pt;
-    margin-top: 10pt;
-    min-width: 90%;
-    max-width: 90%;
+    font-family: "Syne", sans-serif;
 }
 
-.fecha-salida, .fecha-llegada
+a
 {
-    min-width: 45%;
-    max-width: 45%;
-    padding-top: 2%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-
+    font-family: "Syne", sans-serif;
 }
 
-.personas-reserva
+label
 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    border: 2px solid #ccc;
-    margin-bottom: 5pt;
-    min-width: 90%;
-    max-width: 90%;
+    font-family: "Syne", sans-serif;
 }
 
-.adultos, .menores
+select
 {
-    min-width: 45%;
-    max-width: 45%;
-    padding-top: 2%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-  
-label {
-    font-size: 18pt;
-    display: block;
-    margin-bottom: 5px;
-    color: #ccc;
+    font-family: "Syne", sans-serif;
 }
 
-input {
-    font-size: 22pt;
-    width: calc(100% - 10px);
-    margin-bottom: 10px;
-    height: 35pt;
-    border: none;
+option
+{
+    font-family: "Syne", sans-serif;
 }
 
-input:focus {
-    font-size: 18pt;
-    width: calc(100% - 10px);
-    margin-bottom: 10px;
-    height: 35pt;
-    border: none;
-    outline: none;
-}
-.button-reservar {
-    min-width: 83%;
-    max-width: 83%;
-    padding: 15pt;
-    background-color: #d1c05c;
-    border: 2px solid #d1c05c;
-    color: #fff;
-    cursor: pointer;
-    margin-bottom: 10pt;
-    text-align: center;
+input
+{
+    font-family: "Syne", sans-serif;
 }
 
-.button-reservar:hover {
-    background-color: #fff;
-    color: #d1c05c;
-    border: 2px solid #d1c05c;
-    cursor: pointer;
+.top{
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: #fff; /* Cambia esto al color de fondo deseado */
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcional: agregar sombra */
+   z-index: 1000; /
 }
 
-body {
+.middle
+{
+    margin-top: 125pt;
+}
+
+body 
+{
     font-family: Arial, sans-serif;
     background-color: #f8f8f8; /* Color de fondo blanco */
     color: #333; /* Color de texto */
@@ -149,11 +90,13 @@ body {
     display: flex;
 }
 
-.preheader-nav ul li {
+.preheader-nav ul li 
+{
     margin-left: 0px; /* Ajuste el margen izquierdo */
 }
 
-.preheader-nav ul li:last-child {
+.preheader-nav ul li:last-child 
+{
     margin-right: 0;
 }
 
@@ -177,7 +120,8 @@ body {
 }
 
 /* Estilos del dropdown de idioma */
-.language-dropdown {
+.language-dropdown 
+{
     border-left: 1px solid #ccc; /* Borde izquierdo */
     border-right: 1px solid #ccc; /* Borde derecho */
     max-width: 75pt;
@@ -190,48 +134,221 @@ body {
     padding-right: 10pt;
 }
 
-.language-dropdown select {
+.language-dropdown select 
+{
     border: none;
     background-color: transparent;
     cursor: pointer;
 }
 
 /* Estilos del header */
-.header {
+.header 
+{
     background-color: #fff; /* Nuevo color de fondo blanco */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra inferior */
+    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.245); /* Sombra inferior */
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #ccc; /* Borde inferior */
 }
 
-
+.logo img
+{
+    max-height: 75pt;
+}
 
 /* Estilos del menú de navegación */
-nav ul {
+nav ul 
+{
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-nav ul li {
+nav ul li 
+{
     margin-left: 50px; /* Ajuste el margen izquierdo */
 }
 
-nav ul li:last-child {
+nav ul li:last-child 
+{
     margin-right: 0;
 }
 
-nav ul li a {
+nav ul li a 
+{
     text-decoration: none;
     color: #333; /* Color de texto */
 }
 
-nav ul li a:hover {
+nav ul li a:hover 
+{
     color: #d1c05c; /* Nuevo color dorado */
+}
+
+.boton-menu-icono 
+{
+    max-height: 18pt;
+    max-width: 18pt;
+}
+
+@media(min-width: 768px)
+{
+    .boton-menu
+    {
+        display: none;
+        align-items: center;
+    }
+
+    .mini-nav
+    {
+        display: none;
+    }
+
+    /* || CONTENIDO HABITACIONES*/
+    .servicios-row-1, .servicios-row-2
+    {
+        flex-direction: row;
+    }
+
+    .servicios-item
+    {
+        max-width: 30%;
+        min-width: 30%;
+    }
+
+    .tipos-row
+    {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        min-width: 100%;
+        margin: 4% 0;
+    }
+
+    .hab-individual, .hab-doble, .hab-triple
+    {
+        background-size: cover;    
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        min-width: 28%;
+        max-width: 28%;
+        height: 200pt;
+        margin: 0% 2%;
+        background-image: url("img/habitacion-2.jpg");
+        background-repeat: no-repeat;
+        border: 2px solid #000;
+    }
+}
+
+@media(max-width: 768px)
+{
+    .header
+    {
+        box-shadow: none;
+        border-bottom: 2px solid #ccc;
+    }
+
+    .container-bienvenida
+    {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .container-saludo
+    {
+        margin-top: 30pt;
+    }
+    .middle
+    {
+        margin-top: 130pt;
+    }
+
+    .boton-menu
+    {
+        display: block;
+        background: none;
+        border: 2px solid #000;
+        cursor: pointer;
+        align-items: center;
+    }
+
+    nav 
+    {
+        display: none;
+    }
+
+    .mini-nav
+    {
+        display: block;
+    }
+
+    .mini-nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .mini-nav ul li 
+    {
+        padding: 10px;
+        border-bottom: 2px solid #ccc;
+    }
+    
+    .mini-nav ul li:last-child 
+    {
+        margin-right: 0;
+    }
+    
+    .mini-nav ul li a 
+    {
+        text-decoration: none;
+        color: #333; /* Color de texto */
+    }
+    
+    .mini-nav ul li a:hover 
+    {
+        color: #d1c05c; /* Nuevo color dorado */
+    }
+
+    .servicios-row-1, .servicios-row-2
+    {
+        flex-direction:column;
+    }
+
+    .servicios-item
+    {
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    .tipos-row
+    {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        min-width: 100%;
+        margin: 4% 0;
+    }
+
+    .hab-individual, .hab-doble, .hab-triple
+    {
+        background-size: cover;    
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        min-width: 100%;
+        max-width: 100%;
+        height: 200pt;
+        margin: 2% 2%;
+        background-image: url("img/habitacion-2.jpg");
+        background-repeat: no-repeat;
+        border: 2px solid #000;
+    }
 }
 
 /* Contenedor principal */
@@ -241,11 +358,7 @@ nav ul li a:hover {
     padding: 20px;
 }
 
-/* Estilos para el contenido */
-h1, h2, h3 {
-    color: #333; /* Color de texto */
-    text-align: center;
-}
+
 
 /* Estilos para el pie de página */
 footer {
@@ -256,10 +369,517 @@ footer {
     flex-direction: column;
     align-items: center;
 }
-.logo img
+
+
+.footer-container
 {
-    max-height: 75pt;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 75%;
+    font-size: 16pt;
 }
+
+.footer-nav, .footer-contacto, .footer-bio
+{
+    margin-left: 5%;
+    min-width: 30%;
+    max-width: 30%;
+}
+
+/* Estilos del menú de navegación */
+.footer-nav ul, .footer-contacto ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 12pt;
+}
+
+.footer-nav ul li, .footer-contacto ul li 
+{
+    color: #fff; /* Color de texto */
+    
+}
+
+.footer-nav ul li
+{
+    margin-bottom: 5%;
+}
+
+.footer-contacto ul li
+{
+    margin-bottom: 5%;
+}
+
+.footer-nav ul li:last-child, .footer-contacto ul li:last-child 
+{
+    margin-right: 0;
+}
+
+.footer-nav ul li a, .footer-contacto ul li a 
+{
+    text-decoration: none;
+    color: #fff; /* Color de texto */
+    height: 50pt;
+}
+
+.footer-nav ul li a:hover, .footer-contacto ul li a:hover
+{
+    color: #333; /* Nuevo color dorado */
+}
+
+.footer-container h3
+{
+    text-align: left;
+}
+
+.footer-container p
+{
+    color: #fff;
+    text-align: justify;
+}
+
+.footer-contacto-element
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+
+.sub-footer-legal
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: justify;
+    color: #fff;
+}
+
+.footer-legal
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    color: #fff;
+    min-width: 90%;
+}
+
+.footer-legal-element
+{
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    align-items: center;
+    margin: 10pt;
+    text-align: center;  
+
+}
+
+.footer-legal-element:hover
+{
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.copyright
+{
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    align-items: center;
+    margin: 10pt;
+    text-align: center;  
+}
+
+/* || CONTENIDO CONTACTO */
+
+.contenido-contacto
+{
+    margin: 0 5%
+}
+
+.top-contenido-contacto
+{
+    margin-top: 200px;
+}
+
+.formularios
+{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ubicacion
+{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2% 0;
+}
+
+.switch-formularios
+{
+    display: flex;
+    flex-direction: row;
+    border: 3px solid #d1c05c;
+    margin: 2% 0;
+}
+
+.boton-switch-formulario-reservar, .boton-switch-formulario-otros
+{
+    padding: 2%;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.boton-switch-formulario-reservar:hover, .boton-switch-formulario-otros:hover
+{
+    cursor: pointer;
+}
+
+.mapa
+{
+    width: 100%;
+    height: 300pt;
+    margin: 2% 0 0 0;
+}
+
+.mapa-iframe
+{
+    width:100%;
+    height:100%; 
+    border: none;
+}
+
+.formulario-reserva
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+}
+
+.formulario-contacto
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+}
+
+.formulario-reserva .sep-line
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario-reserva-device
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin: 1% 1%;
+    width: 100%;
+}
+
+.formulario-reserva-datos-visita, .formulario-reserva-datos-contacto
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid #000;
+    margin: 2%;
+    width: 100%;
+    padding: 1%;
+    align-items: center;
+}
+
+.formulario-reserva-mascotas
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin: 1% 1%;
+    max-width: 20%;
+}
+
+.formulario-reserva-nombre-apellidos, .formulario-reserva-correo-telefono, .formulario-reserva-huespedes, .formulario-reserva-fechas, .formulario-reserva-habitaciones
+{
+    display: flex;
+    flex-direction: row;
+    margin: 1%;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.formulario-reserva-nombre-apellidos input, .formulario-reserva-correo-telefono input, .formulario-reserva-huespedes input, .formulario-reserva-habitaciones input
+{
+    border: none;
+    border-bottom:2px solid #d1c05c;
+    outline: none;
+    width: 100%;
+    height: 30px;
+    background-color: #f8f8f8;
+    font-size: 18pt;
+}
+
+.formulario-reserva-salida-input, .formulario-reserva-llegada-input
+{
+    border: none;
+    border-bottom:2px solid #d1c05c;
+    outline: none;
+    width: 100%;
+    height: 30px;
+    background-color: #f8f8f8;
+    font-size: 18pt;
+}
+
+.formulario-reserva-nombre-apellidos label, .formulario-reserva-correo-telefono label, .formulario-reserva-huespedes label
+{
+    font-size: 12pt;
+    color: #aaa;
+}
+
+
+/* || CONTENIDO HABITACIONES */
+
+.contenido-habitaciones
+{
+    margin: 0 5%
+}
+
+.icon-pic
+{
+    max-width: 15pt;
+    max-height: 15pt;
+    margin-right: 5pt;
+}
+
+.top-contenido-habitaciones
+{
+    margin-top: 200px;
+}
+
+.servicios-row-1, .servicios-row-2
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.servicios-item
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10pt 0;
+    background-color: #fff;
+    height: 200pt;
+}
+
+.servicios-item img
+{
+    margin: 10pt;
+}
+
+.servicios-item p
+{
+    margin: 25pt 25pt;
+}
+
+.seccion-titulo
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4% 0;
+}
+
+.tipos-habitacion
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.tipos-block
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+}
+
+.hab-individual img, .hab-doble img, .hab-triple img
+{
+    width: 100%;
+    min-height: 70%;
+    object-fit: fill;
+}
+
+.hab-individual h2, .hab-doble h2, .hab-triple h2
+{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-width: 100%;
+    background-color: rgba(255,255,255,0.8);
+    margin: 0;
+    align-items: center;
+}
+
+/* || CONTENIDO INICIO */
+
+.reserva
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-bienvenida
+{
+    background-image: url("img/monasterio.jpg") ;
+    background-color: #cccccc;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.container-saludo
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container-reserva 
+{
+    max-width: 90%;
+    margin: 10%;
+    padding: 3%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fechas-reserva
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 2px solid #ccc;
+    margin-bottom: 5pt;
+    margin-top: 10pt;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.fecha-salida, .fecha-llegada
+{
+    min-width: 45%;
+    max-width: 45%;
+    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.personas-reserva
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 2px solid #ccc;
+    margin-bottom: 5pt;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.adultos, .menores
+{
+    min-width: 45%;
+    max-width: 45%;
+    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.container-reserva label 
+{
+    font-size: 20pt;
+    display: block;
+    margin-bottom: 5px;
+    color: #ccc;
+}
+.container-reserva input 
+{
+    font-size: 18pt;
+    width: calc(100% - 10px);
+    margin-bottom: 10px;
+    height: 35pt;
+    border: none;
+}
+
+.container-reserva input:focus 
+{
+    font-size: 18pt;
+    width: calc(100% - 10px);
+    margin-bottom: 10px;
+    height: 35pt;
+    border: none;
+    outline: none;
+}
+.button-reservar 
+{
+    min-width: 90%;
+    max-width: 90%;
+    padding: 15pt;
+    background-color: #d1c05c;
+    border: 2px solid #d1c05c;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 10pt;
+    text-align: center;
+}
+
+.button-reservar:hover 
+{
+    background-color: #fff;
+    color: #d1c05c;
+    border: 2px solid #d1c05c;
+    cursor: pointer;
+}
+
 .short-desc
 {
     display: flex;
@@ -275,6 +895,14 @@ footer {
     width: 50px;
     border-bottom: 2px solid #d1c05c;
 }
+
+.sep-line-horizontal
+{
+    width: 1px;
+    height: 20px;
+    border-left: 1px solid #d1c05c;
+    margin: 0 1%;
+}
 .button-saber-mas
 {
     width: 120pt;
@@ -287,12 +915,14 @@ footer {
     border: 2px solid #d1c05c;
     color: #fff;
     background-color: #d1c05c;
+    cursor: pointer;
 }
 .button-saber-mas:hover
 {
     border: 2px solid #d1c05c;
     color: #d1c05c;
     background-color: #fff;
+    cursor: pointer;
 }
 .caracteristicas
 {
@@ -328,51 +958,88 @@ footer {
     filter: grayscale(0%);
 }
 
-.footer-container
+.faqs-container, .faqs-lista-container
 {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    max-width: 75%;
-    font-size: 16pt;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
 }
 
-.footer-nav, .footer-contacto, .footer-bio
+.faqs-lista-container
 {
-    margin-left: 5%;
-
+    width: 90%;
 }
 
-/* Estilos del menú de navegación */
-.footer-nav ul, .footer-contacto ul{
+.faqs-lista {
     list-style: none;
-    margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    font-size: 16pt;
+    align-items: center;
+    width: 100%;
 }
 
-.footer-nav ul li, .footer-contacto ul li {
-    color: #fff; /* Color de texto */
-    margin-bottom: 10%;
-}
-
-.footer-nav ul li:last-child, .footer-contacto ul li:last-child {
-    margin-right: 0;
-}
-
-.footer-nav ul li a, .footer-contacto ul li a {
-    text-decoration: none;
-    color: #fff; /* Color de texto */
-    height: 50pt;
-}
-
-.footer-nav ul li a:hover, .footer-contacto ul li a:hover{
-    color: #333; /* Nuevo color dorado */
-}
-
-.footer-container h3
+.faqs-lista li 
 {
-    text-align: left;
+    padding: 10px;
+    border-top: 2px solid #ccc;
+    width: 90%;
+    align-items: center;
+
+}
+
+.faqs-lista ul li:last-child 
+{
+    margin-right: 0;
+    border-bottom: 2px solid #ccc;
+}
+
+.faqs-lista ul li a 
+{
+    text-decoration: none;
+    color: #333; /* Color de texto */
+}
+
+
+.faqs-lista ul li a:hover 
+{
+    color: #d1c05c; /* Nuevo color dorado */
+}
+
+.faqs-lista-element-header
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.faqs-lista-element-header-button
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    width: 15pt;
+    height: 15pt;
+    background-color: #fff;
+    border: none;
+}
+
+.faqs-lista-element-header-title
+{
+    padding: 0 20pt;
+}
+
+.faqs-lista-element-header-button img
+{
+    width: 15pt;
+    height: 15pt;
+    padding: 0;
+    margin: 0;
+}
+
+.faqs-lista-element-header-title, .faqs-lista-element-header-button
+{
+    cursor: pointer;
 }

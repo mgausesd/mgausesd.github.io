@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Borja</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--Preheader-->
+    <div class="top">
+        <div class="preheader">
+            <div class="preheader-nav">
+                <ul>
+                    <li>
+                        <!-- Sección del selector de idioma -->
+                        <div class="language-dropdown">
+                            <select id="language-select" onchange="changeLanguage()">
+                                <option value="es">Español</option>
+                                <option value="en">English</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="preheader-telephone-button"><img class="icon-pic" src="img/telefono.png" alt="telefono">+34 96 147 09 81</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Contenedor del logo y menú -->
+        <div class="header">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo"> <!-- Coloca aquí la ruta de tu logo -->
+            </div>
+            <button id="boton-menu" class="boton-menu" onclick="onClickMenuButton()">
+                <img class="boton-menu-icono" src="img/icono-menu.png" alt="icono">
+            </button>
+            <!-- Menú de navegación -->
+            <nav>
+                <ul id="nav-links">
+                    <li><a href="index.html" data-text-key="inicio">Inicio</a></li>
+                    <li><a href="hotel.html" data-text-key="elhotel">El hotel</a></li>
+                    <li><a href="localidad.html" data-text-key="localidad">Localidad</a></li>
+                    <li><a href="habitaciones.html" data-text-key="habitaciones">Habitaciones</a></li>
+                    <li><a href="contacto.html" data-text-key="contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="mini-nav" class="mini-nav">
+            <ul id="nav-links">
+                <li><a href="index.html" data-text-key="inicio">Inicio</a></li>
+                <li><a href="hotel.html" data-text-key="elhotel">El hotel</a></li>
+                <li><a href="localidad.html" data-text-key="localidad">Localidad</a></li>
+                <li><a href="habitaciones.html" data-text-key="habitaciones">Habitaciones</a></li>
+                <li><a href="contacto.html" data-text-key="contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="middle">
+        <!-- Contenido principal -->
+    </div>
+    <!-- Pie de página -->
+    <footer>
+        <div id="footer-container" class="footer-container">
+            <div id="footer-nav" class="footer-nav">
+                <h3 data-text-key="sobre-nosotros">Sobre nosotros</h3>
+                <div class="sep-line-footer"></div>
+                <ul>
+                    <li><a href="index.html" data-text-key="inicio">Inicio</a></li>
+                    <li><a href="hotel.html" data-text-key="elhotel">El hotel</a></li>
+                    <li><a href="localidad.html" data-text-key="localidad">Localidad</a></li>
+                    <li><a href="habitaciones.html" data-text-key="habitaciones">Habitaciones</a></li>
+                </ul>
+            </div>
+            <div id="footer-contacto" class="footer-contacto">
+                <h3 data-text-key="encuentranos">Encuéntranos</h3>
+                <div class="sep-line-footer"></div>
+                <ul>
+                    <li><div class="footer-contacto-element"><img class="icon-pic" src="img/ubicación.png" alt="ubicacion"><div>Carrer del progrés 35, 46540 El Puig, Valencia, España</div></div></li>
+                    <li><div class="footer-contacto-element"><img class="icon-pic" src="img/telefono.png" alt="telefono"><div>+34 96 147 09 81</div></div></li>
+                    <li><div class="footer-contacto-element"><img class="icon-pic" src="img/correo.png" alt="correo"><div>correo@hotelborja.es</div></div></li>
+                </ul>
+            </div>
+            <div id="footer-bio" class="footer-bio">
+                <h3 data-text-key="footer-hotel-borja">Hotel Borja</h3>
+                <div class="sep-line-footer"></div>
+                <p data-text-key="footer-bio">
+                    Siéntete como en casa en nuestro hotel, envuelto en un entorno acogedor repleto de lugares en los que crear anécdotas y recuerdos
+                </p>
+            </div>
+        </div>
+        <div class="footer-legal">
+            <div class="sub-footer-legal">
+                <span class="copyright" data-text-key="copyright">&copy; 2024 Hotel Borja. Todos los derechos reservados.</span>
+                <a href="legal.html" data-text-key="legal" class="footer-legal-element">Aviso legal</a>
+                <a href="cookies.html" data-text-key="cookies" class="footer-legal-element">Inicio</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

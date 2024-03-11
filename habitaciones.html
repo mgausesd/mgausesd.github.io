@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Borja</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--Preheader-->
+    <div class="top">
+        <div class="preheader">
+            <div class="preheader-nav">
+                <ul>
+                    <li>
+                        <!-- Sección del selector de idioma -->
+                        <div class="language-dropdown">
+                            <select id="language-select" onchange="changeLanguage()">
+                                <option value="es">Español</option>
+                                <option value="en">English</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="preheader-telephone-button"><img class="icon-pic" src="img/telefono.png" alt="telefono">+34 96 147 09 81</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Contenedor del logo y menú -->
+        <div class="header">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo"> <!-- Coloca aquí la ruta de tu logo -->
+            </div>
+            <button id="boton-menu" class="boton-menu" onclick="onClickMenuButton()">
+                <img class="boton-menu-icono" src="img/icono-menu.png" alt="icono">
+            </button>
+            <!-- Menú de navegación -->
+            <nav>
+                <ul id="nav-links">
+                    <li><a href="index.html" data-text-key="inicio">Inicio</a></li>
+                    <li><a href="hotel.html" data-text-key="elhotel">El hotel</a></li>
+                    <li><a href="localidad.html" data-text-key="localidad">Localidad</a></li>
+                    <li><a href="habitaciones.html" data-text-key="habitaciones">Habitaciones</a></li>
+                    <li><a href="contacto.html" data-text-key="contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="mini-nav" class="mini-nav">
+            <ul id="nav-links">
+                <li><a href="index.html" data-text-key="inicio">Inicio</a></li>
+                <li><a href="hotel.html" data-text-key="elhotel">El hotel</a></li>
+                <li><a href="localidad.html" data-text-key="localidad">Localidad</a></li>
+                <li><a href="habitaciones.html" data-text-key="habitaciones">Habitaciones</a></li>
+                <li><a href="contacto.html" data-text-key="contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="middle">
+        <!-- Contenido principal -->
+        <div class="contenido-habitaciones">
+            <div class="top-contenido-habitaciones">
+
+            </div>
+            <div class="tipos-habitacion">
+                <div class="seccion-titulo">
+                    <h1 class="servicios-item-titulo" data-text-key="seccion-titulo-habitaciones">
+                        Tipos de habitación
+                    </h1>
+                </div>
+                <div class="tipos-block">
+                    <div class="sep-line"></div>
+                    <p class="servicios-item-parrafo" data-text-key="seccion-titulo-habitaciones-parrafo">
+                        En hotel Borja disponemos de varios tipos de habitación, de una, de dos y hasta de tres personas. Existe la posibilidad de incluir una cama supletoria.
+                    </p>
+                    <div class="sep-line"></div>
+                    <div class="tipos-row">
+                        <div class="hab-individual">
+                            <h2 class="tipo-hab-titulo" data-text-key="tipo-habitacion-individual">
+                                Habitación individual
+                            </h2>
+                        </div>
+                        <div class="hab-doble">
+                            <h2 class="tipo-hab-titulo" data-text-key="tipo-habitacion-doble">
+                                Habitación doble
+                            </h2>
+                        </div>
+                        <div class="hab-triple">
+                            <h2 class="tipo-hab-titulo" data-text-key="tipo-habitacion-triple">
+                                Habitación triple
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="servicios">
+                <div class="seccion-titulo">
+                    <h1 class="servicios-item-titulo" data-text-key="seccion-titulo-servicios">
+                        Nuestros servicios
+                    </h1>
+                </div>
+                <div class="servicios-row-1">
+                    <div class="servicios-item">
+                        <img class="servicios-icono" src="img/climatizacion.png">
+                        <div class="sep-line"></div>
+                        <h2 class="servicios-item-titulo" data-text-key="servicios-item-titulo-climatizacion">
+                            Climatización
+                        </h2>
+                        <div class="sep-line"></div>
+                        <p class="servicios-item-parrafo" data-text-key="servicios-item-parrafo-climatizacion">
+                            Siéntete agusto en nuestras habitaciones adaptando la temperatura de tu habitación.
+                        </p>
+                    </div>
+                    <div class="servicios-item">
+                        <img class="servicios-icono" src="img/atento.png">
+                        <div class="sep-line"></div>
+                        <h2 class="servicios-item-titulo" data-text-key="servicios-item-titulo-atencion">
+                            Atención cercana
+                        </h2>
+                        <div class="sep-line"></div>
+                        <p class="servicios-item-parrafo" data-text-key="servicios-item-parrafo-atencion">
+                            Nuestro personal se encarga de todo, tu disfruta.
+                        </p>
+                    </div>
+                    <div class="servicios-item">
+                        <img class="servicios-icono" src="img/television.png">
+                        <div class="sep-line"></div>
+                        <h2 class="servicios-item-titulo" data-text-key="servicios-item-titulo-television">
+                            Televisión
+                        </h2>
+                        <div class="sep-line"></div>
+                        <p class="servicios-item-parrafo" data-text-key="servicios-item-parrafo-television">
+                            Sintoniza con tu contenido favorito desde una de nuestras habitaciones y disfruta de entretenimiento visual.
+                        </p>
+                    </div>
+                </div>
+                <div class="servicios-row-2">
+                    <div class="servicios-item">
+                        <img class="servicios-icono" src="img/wifi.png">
+                        <div class="sep-line"></div>
+                        <h2 class="servicios-item-titulo" data-text-key="servicios-item-titulo-wifi">
+                            Wi-fi
+                        </h2>
+                        <div class="sep-line"></div>
+                        <p class="servicios-item-parrafo" data-text-key="servicios-item-parrafo-wifi">
+                            Navega por la red desde la comodidad de tu habitación y siéntete sin límites.
+                        </p>
+                    </div>
+                    <div class="servicios-item">
+                        <img class="servicios-icono" src="img/lavadora.png">
+                        <div class="sep-line"></div>
+                        <h2 class="servicios-item-titulo" data-text-key="servicios-item-titulo-lavanderia">
+                            Lavandería    
+                        </h2>
+                        <div class="sep-line"></div>
+                        <p class="servicios-item-parrafo" data-text-key="servicios-item-parrafo-lavanderia">
+                            En Hotel Borja disponemos de servicio de lavandería discrecional.
+                        </p>
+                    </div>
+                    <div class="servicios-item">
+                        <img class="servicios-icono" src="img/tarjetas.png">
+                        <div class="sep-line"></div>
+                        <h2 class="servicios-item-titulo" data-text-key="servicios-item-titulo-tarjeta">
+                            Pago con tarjeta
+                        </h2>
+                        <div class="sep-line"></div>
+                        <p class="servicios-item-parrafo" data-text-key="servicios-item-parrafo-tarjeta">
+                            Puedes dejar tu efectivo en casa, aquí las tarjetas son bienvenidas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pie de página -->
+    <footer>
+        <div id="footer-container" class="footer-container">
+            <div id="footer-nav" class="footer-nav">
+                <h3 data-text-key="sobre-nosotros">Sobre nosotros</h3>
+                <div class="sep-line-footer"></div>
+                <ul>
+                    <li><a href="index.html" data-text-key="inicio">Inicio</a></li>
+                    <li><a href="hotel.html" data-text-key="elhotel">El hotel</a></li>
+                    <li><a href="localidad.html" data-text-key="localidad">Localidad</a></li>
+                    <li><a href="habitaciones.html" data-text-key="habitaciones">Habitaciones</a></li>
+                </ul>
+            </div>
+            <div id="footer-contacto" class="footer-contacto">
+                <h3 data-text-key="encuentranos">Encuéntranos</h3>
+                <div class="sep-line-footer"></div>
+                <ul>
+                    <li><div class="footer-contacto-element"><img class="icon-pic" src="img/ubicación.png" alt="ubicacion"><div>Carrer del progrés 35, 46540 El Puig, Valencia, España</div></div></li>
+                    <li><div class="footer-contacto-element"><img class="icon-pic" src="img/telefono.png" alt="telefono"><div>+34 96 147 09 81</div></div></li>
+                    <li><div class="footer-contacto-element"><img class="icon-pic" src="img/correo.png" alt="correo"><div>correo@hotelborja.es</div></div></li>
+                </ul>
+            </div>
+            <div id="footer-bio" class="footer-bio">
+                <h3 data-text-key="footer-hotel-borja">Hotel Borja</h3>
+                <div class="sep-line-footer"></div>
+                <p data-text-key="footer-bio">
+                    Siéntete como en casa en nuestro hotel, envuelto en un entorno acogedor repleto de lugares en los que crear anécdotas y recuerdos
+                </p>
+            </div>
+        </div>
+        <div class="footer-legal">
+            <div class="sub-footer-legal">
+                <span class="copyright" data-text-key="copyright">&copy; 2024 Hotel Borja. Todos los derechos reservados.</span>
+                <a href="legal.html" data-text-key="legal" class="footer-legal-element">Aviso legal</a>
+                <a href="cookies.html" data-text-key="cookies" class="footer-legal-element">Inicio</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

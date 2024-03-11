@@ -8,167 +8,252 @@
 </head>
 <body>
     <!--Preheader-->
-    <div class="preheader">
-        <div class="preheader-nav">
-            <ul>
-                <li>
-                    <!-- Sección del selector de idioma -->
-                    <div class="language-dropdown">
-                        <select id="language-selector">
-                            <option value="es">Español</option>
-                            <option value="en">English</option>
-                        </select>
-                    </div>
-                </li>
-                <li>
-                    <div class="preheader-telephone-button">Tel. 966666666</div>
-                </li>
+    <div class="top">
+        <div class="preheader">
+            <div class="preheader-nav">
+                <ul>
+                    <li>
+                        <!-- Sección del selector de idioma -->
+                        <div class="language-dropdown">
+                            <select id="language-select" onchange="changeLanguage()">
+                                <option value="es">Español</option>
+                                <option value="en">English</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="preheader-telephone-button"><img class="icon-pic" src="img/telefono.png" alt="telefono">+34 96 147 09 81</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Contenedor del logo y menú -->
+        <div class="header">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo"> <!-- Coloca aquí la ruta de tu logo -->
+            </div>
+            <button id="boton-menu" class="boton-menu" onclick="onClickMenuButton()">
+                <img class="boton-menu-icono" src="img/icono-menu.png" alt="icono">
+            </button>
+            <!-- Menú de navegación -->
+            <nav>
+                <ul id="nav-links">
+                    <li><a href="index.html" data-text-key="inicio">Inicio</a></li>
+                    <li><a href="hotel.html" data-text-key="elhotel">El hotel</a></li>
+                    <li><a href="localidad.html" data-text-key="localidad">Localidad</a></li>
+                    <li><a href="habitaciones.html" data-text-key="habitaciones">Habitaciones</a></li>
+                    <li><a href="contacto.html" data-text-key="contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="mini-nav" class="mini-nav">
+            <ul id="nav-links">
+                <li><a href="index.html" data-text-key="inicio">Inicio</a></li>
+                <li><a href="hotel.html" data-text-key="elhotel">El hotel</a></li>
+                <li><a href="localidad.html" data-text-key="localidad">Localidad</a></li>
+                <li><a href="habitaciones.html" data-text-key="habitaciones">Habitaciones</a></li>
+                <li><a href="contacto.html" data-text-key="contacto">Contacto</a></li>
             </ul>
         </div>
     </div>
-
-    <!-- Contenedor del logo y menú -->
-    <div class="header">
-        <!-- Logo -->
-        <div class="logo">
-            <img src="img/logo.png" alt="Logo"> <!-- Coloca aquí la ruta de tu logo -->
+    <div class="middle">
+        <div class="container-bienvenida">
+            <div class="container-saludo">
+                <h1 data-text-key="bienvenida">Bienvenidos al hotel Borja</h1>
+                <div class="sep-line"></div>
+                <p data-text-key="bienvenida-caption">
+                    Tu estancia en nuestro alojamiento está a un click
+                </p>
+            </div>
+            <div class="reserva">
+                <div class="container-reserva">
+                    <div class="fechas-reserva">
+                        <div class="fecha-llegada">
+                            <label for="checkin" data-text-key="reserva-llegada">Llegada</label>
+                            <input type="date" id="checkin">
+                        </div>
+                        <div class="fecha-salida">
+                            <label for="checkout" data-text-key="reserva-salida">Salida</label>
+                            <input type="date" id="checkout">
+                        </div>
+                    </div>
+                    <div class="personas-reserva">
+                        <div class="adultos">
+                            <label for="adults" data-text-key="reserva-adultos">Adultos</label>
+                            <input type="number" id="adults" min="1" max="10" value="1">
+                        </div>
+                        <div class="menores">
+                            <label for="children" data-text-key="reserva-ninos">Niños</label>
+                            <input type="number" id="children" min="0" max="10" value="0">
+                        </div>
+                    </div>
+                    <!--<button onclick="submitReservation()">Reservar</button>-->
+                    <div class="button-reservar" onclick="checkAvailability()" data-text-key="reserva-boton">Comprobar disponibilidad</div>
+                    </div> 
+            </div>
+        </div>
+        <!-- Contenido principal -->
+        <div class="container">
+            <div class="caracteristicas">
+                <div id="short-hotel" class="short-desc-container">
+                    <div class="short-desc">
+                        <h1 data-text-key="short-hotel-titulo">Un hotel con historia</h1>
+                        <div class="sep-line"></div>
+                        <p data-text-key="short-hotel-parrafo-uno">
+                            Un hotel cómodo, agradable y tranquilo, enclavado en un entorno pacífico como es el caso antiguo de El Puig. 
+                        </p>
+                        <p data-text-key="short-hotel-parrafo-dos">
+                            De marcado carácter familiar, en el nuestro hotel nos especializamos en hacer de la estancia una experiencia inmejorable.
+                        </p>
+                        <div class="sep-line"></div>
+                        <div onclick="saberMasButtonClick('hotel.html')" data-text-key="short-hotel-button" class="button-saber-mas">Acerca del hotel</div>
+                    </div>
+                    <div class="short-pic">
+                        <img src="img/hotel.jpg" alt="Logo">
+                    </div>
+                </div>
+                <div class="short-desc-container">
+                    <div class="short-pic">
+                        <img src="img/monasterio.jpg" alt="Logo">
+                    </div>
+                    <div class="short-desc">
+                        <h1 data-text-key="short-localidad-titulo">Entorno acogedor</h1>
+                        <div class="sep-line"></div>
+                        <p data-text-key="short-localidad-parrafo-uno">
+                            Calles antiguas, cercanía con el mar y monumentos históricos. la lista para las vacaciones perfectas.
+                        </p>
+                        <p data-text-key="short-localidad-parrafo-dos">
+                            El Puig tiene una gran cantidad de experiencias que ofrecer, además la cercanía con Valencia y el mar hacen de este un lugar ideal para el descanso.
+                        </p>
+                        <div class="sep-line"></div>
+                        <div onclick="saberMasButtonClick('localidad.html')" data-text-key="short-localidad-button" class="button-saber-mas">El Puig y alrededores</div>
+                    </div>
+                </div> 
+                <div id="short-localidad" class="short-desc-container">
+                    <div class="short-desc">
+                        <h1 data-text-key="short-habitaciones-titulo">Descansa tranquilamente</h1>
+                        <div class="sep-line"></div>
+                        <p data-text-key="short-habitaciones-parrafo-uno">
+                            Nuestro hotel-residencia cuenta con una amplia variedad de habitaciones. Seguro que hay una de su agrado.
+                        </p>
+                        <p data-text-key="short-habitaciones-parrafo-dos">
+                            Todas nuestras habitaciones cuentan con servicios dispuestos a su conveniencia.
+                        </p>
+                        <div class="sep-line"></div>
+                        <div onclick="saberMasButtonClick('habitaciones.html')" data-text-key="short-habitaciones-button" class="button-saber-mas">Las habitaciones</div>
+                    </div>
+                    <div class="short-pic">
+                        <img src="img/habitacion.jpg" alt="Logo">
+                    </div>
+                </div>
+                <div class="faqs-container">
+                    <h1 data-text-key="faqs-titulo">Fuera dudas</h1>
+                    <div class="sep-line"></div>
+                    <div class="faqs-lista-container">
+                        <ul class="faqs-lista">
+                            <li>
+                                <div id="faqs-lista-item-1" class="faqs-lista-element">
+                                    <div class="faqs-lista-element-header">
+                                        <button id="faqs-lista-button-1" class="faqs-lista-element-header-button" onclick="onClickFaqButton(this.id)">
+                                            <img class="boton-faqs-icono" src="img/derecha.png" alt="icono">
+                                        </button>
+                                        <h3 id="faq-title-1" onclick="onClickFaqButton(this.id)" class="faqs-lista-element-header-title" data-text-key="faq-titulo-1">¿Puedo ir con mi mascota?</h3>
+                                    </div>
+                                    <div id="faqs-lista-element-content-1" class="faqs-lista-element-content">
+                                        <p id="faqs-lista-element-content-parrafo-1" data-text-key="faq-answer-1">adjasndkjasbdnkjasld jkabnsdkjasbndkjlasbdnkjalsd</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="faqs-lista-item-2" class="faqs-lista-element">
+                                    <div class="faqs-lista-element-header">
+                                        <button id="faqs-lista-button-2" class="faqs-lista-element-header-button" onclick="onClickFaqButton(this.id)">
+                                            <img class="boton-faqs-icono" src="img/derecha.png" alt="icono">
+                                        </button>
+                                        <h3 id="faq-title-2" onclick="onClickFaqButton(this.id)" class="faqs-lista-element-header-title" data-text-key="faq-titulo-2">¿El hotel dispone de aparcamiento?</h3>
+                                    </div>
+                                    <div id="faqs-lista-element-content-2" class="faqs-lista-element-content">
+                                        <p id="faqs-lista-element-content-parrafo-2" data-text-key="faq-answer-2">adjasndkjasbdnkjasld jkabnsdkjasbndkjlasbdnkjalsd</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="faqs-lista-item-3" class="faqs-lista-element">
+                                    <div class="faqs-lista-element-header">
+                                        <button id="faqs-lista-button-3" class="faqs-lista-element-header-button" onclick="onClickFaqButton(this.id)">
+                                            <img class="boton-faqs-icono" src="img/derecha.png" alt="icono">
+                                        </button>
+                                        <h3 id="faq-title-3" onclick="onClickFaqButton(this.id)" class="faqs-lista-element-header-title" data-text-key="faq-titulo-3">¿Otra pregunta?</h3>
+                                    </div>
+                                    <div id="faqs-lista-element-content-3" class="faqs-lista-element-content">
+                                        <p id="faqs-lista-element-content-parrafo-3" data-text-key="faq-answer-3">adjasndkjasbdnkjasld jkabnsdkjasbndkjlasbdnkjalsd</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="faqs-lista-item-4" class="faqs-lista-element">
+                                    <div class="faqs-lista-element-header">
+                                        <button id="faqs-lista-button-4" class="faqs-lista-element-header-button" onclick="onClickFaqButton(this.id)">
+                                            <img class="boton-faqs-icono" src="img/derecha.png" alt="icono">
+                                        </button>
+                                        <h3 id="faq-title-4" onclick="onClickFaqButton(this.id)" class="faqs-lista-element-header-title" data-text-key="faq-titulo-4">¿Otra pregunta?</h3>
+                                    </div>
+                                    <div id="faqs-lista-element-content-4" class="faqs-lista-element-content">
+                                        <p id="faqs-lista-element-content-parrafo-4" data-text-key="faq-answer-4">adjasndkjasbdnkjasld jkabnsdkjasbndkjlasbdnkjalsd</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="faqs-lista-element">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
         
-        <!-- Menú de navegación -->
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="hotel.html">El hotel</a></li>
-                <li><a href="localidad.html">Localidad</a></li>
-                <li><a href="habitaciones.html">Habitaciones</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
     </div>
-    <div class="container-bienvenida">
-        <div class="container-saludo">
-            <h1>Bienvenidos al hotel Borja</h1>
-            <div class="sep-line"></div>
-            <p>
-                Tu estancia en nuestro alojamiento está a un click
-            </p>
-        </div>
-        <div class="reserva">
-            <div class="container-reserva">
-                <div class="fechas-reserva">
-                    <div class="fecha-llegada">
-                        <label for="checkin">Llegada</label>
-                        <input type="date" id="checkin">
-                    </div>
-                    <div class="fecha-salida">
-                        <label for="checkout">Salida</label>
-                        <input type="date" id="checkout">
-                    </div>
-                </div>
-                <div class="personas-reserva">
-                    <div class="adultos">
-                        <label for="adults">Adultos:</label>
-                        <input type="number" id="adults" min="1" value="1">
-                    </div>
-                    <div class="menores">
-                        <label for="children">Niños:</label>
-                        <input type="number" id="children" min="0" value="0">
-                    </div>
-                </div>
-                <!--<button onclick="submitReservation()">Reservar</button>-->
-                <div class="button-reservar" onclick="checkAvailability()">Comprobar disponibilidad</div>
-                </div> 
-        </div>
-    </div>
-    <!-- Contenido principal -->
-    <div class="container">
-        <div class="caracteristicas">
-            <div id="short-hotel" class="short-desc-container">
-                <div class="short-desc">
-                    <h1>Un hotel con historia</h1>
-                    <div class="sep-line"></div>
-                    <p>
-                        Un hotel cómodo, agradable y tranquilo, enclavado en un entorno pacífico como es el caso antiguo de El Puig. 
-                    </p>
-                    <p>
-                        De marcado carácter familiar, en el nuestro hotel nos especializamos en hacer de la estancia una experiencia inmejorable.
-                    </p>
-                    <div class="sep-line"></div>
-                    <div class="button-saber-mas">Acerca del hotel</div>
-                </div>
-                <div class="short-pic">
-                    <img src="img/hotel.jpg" alt="Logo">
-                </div>
-            </div>
-            <div class="short-desc-container">
-                <div class="short-pic">
-                    <img src="img/monasterio.jpg" alt="Logo">
-                </div>
-                <div class="short-desc">
-                    <h1>Entorno acogedor</h1>
-                    <div class="sep-line"></div>
-                    <p>
-                        Calles antiguas, cercanía con el mar y monumentos históricos. la lista para las vacaciones perfectas.
-                    </p>
-                    <p>
-                        El Puig tiene una gran cantidad de experiencias que ofrecer, además la cercanía con Valencia y el mar hacen de este un lugar ideal para el descanso.
-                    </p>
-                    <div class="sep-line"></div>
-                    <div class="button-saber-mas">El Puig y alrededores</div>
-                </div>
-            </div> 
-            <div id="short-localidad" class="short-desc-container">
-                <div  class="short-desc">
-                    <h1>Descansa tranquilamente</h1>
-                    <div class="sep-line"></div>
-                    <p>
-                        Nuestro hotel-residencia cuenta con una amplia variedad de habitaciones. Seguro que hay una de su agrado
-                    </p>
-                    <p>
-                        Todas nuestras habitaciones cuentan con servicios dispuestos a su conveniencia.
-                    </p>
-                    <div class="sep-line"></div>
-                    <div class="button-saber-mas">Las habitaciones</div>
-                </div>
-                <div class="short-pic">
-                    <img src="img/habitacion.jpg" alt="Logo">
-                </div>
-            </div>
-        </div>
-    </div>
-    
     <!-- Pie de página -->
     <footer>
-        <div class="footer-container">
-            <div class="footer-nav">
-                <h3>Sobre nosotros</h3>
+        <div id="footer-container" class="footer-container">
+            <div id="footer-nav" class="footer-nav">
+                <h3 data-text-key="sobre-nosotros">Sobre nosotros</h3>
                 <div class="sep-line-footer"></div>
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="hotel.html">El hotel</a></li>
-                    <li><a href="localidad.html">Localidad</a></li>
-                    <li><a href="habitaciones.html">Habitaciones</a></li>
+                    <li><a href="index.html" data-text-key="inicio">Inicio</a></li>
+                    <li><a href="hotel.html" data-text-key="elhotel">El hotel</a></li>
+                    <li><a href="localidad.html" data-text-key="localidad">Localidad</a></li>
+                    <li><a href="habitaciones.html" data-text-key="habitaciones">Habitaciones</a></li>
                 </ul>
             </div>
-            <div class="footer-contacto">
-                <h3>Encuéntranos</h3>
+            <div id="footer-contacto" class="footer-contacto">
+                <h3 data-text-key="encuentranos">Encuéntranos</h3>
                 <div class="sep-line-footer"></div>
                 <ul>
-                    <li><div class="footer-contacto-element"><img><div>Carrer del progrés, El Puig de Santa Maria, Valencia, España</div></div></li>
-                    <li><div class="footer-contacto-element"><img><div>Tel. 96666666</div></div></li>
-                    <li><div class="footer-contacto-element"><img><div>correo@hotelborja.es</div></div></li>
+                    <li><div class="footer-contacto-element"><img class="icon-pic" src="img/ubicación.png" alt="ubicacion"><div>Carrer del progrés 35, 46540 El Puig, Valencia, España</div></div></li>
+                    <li><div class="footer-contacto-element"><img class="icon-pic" src="img/telefono.png" alt="telefono"><div>+34 96 147 09 81</div></div></li>
+                    <li><div class="footer-contacto-element"><img class="icon-pic" src="img/correo.png" alt="correo"><div>correo@hotelborja.es</div></div></li>
                 </ul>
             </div>
-            <div class="footer-bio">
-                <h3>Hotel Borja</h3>
+            <div id="footer-bio" class="footer-bio">
+                <h3 data-text-key="footer-hotel-borja">Hotel Borja</h3>
                 <div class="sep-line-footer"></div>
-                <p>
+                <p data-text-key="footer-bio">
                     Siéntete como en casa en nuestro hotel, envuelto en un entorno acogedor repleto de lugares en los que crear anécdotas y recuerdos
                 </p>
             </div>
         </div>
-        <p>&copy; 2024 Hotel Borja. Todos los derechos reservados.</p>
+        <div class="footer-legal">
+            <div class="sub-footer-legal">
+                <span class="copyright" data-text-key="copyright">&copy; 2024 Hotel Borja. Todos los derechos reservados.</span>
+                <a href="legal.html" data-text-key="legal" class="footer-legal-element">Aviso legal</a>
+                <a href="cookies.html" data-text-key="cookies" class="footer-legal-element">Inicio</a>
+            </div>
+        </div>
     </footer>
+    <script src="script.js"></script>
 </body>
-
 </html>

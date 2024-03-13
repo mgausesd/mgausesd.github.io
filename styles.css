@@ -229,7 +229,6 @@ nav ul li a:hover
 
     .hab-individual, .hab-doble, .hab-triple
     {
-        background-size: cover;    
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -239,6 +238,7 @@ nav ul li a:hover
         margin: 0% 2%;
         background-image: url("img/habitacion-2.jpg");
         background-repeat: no-repeat;
+        background-size: cover;    
         border: 2px solid #000;
     }
 }
@@ -574,6 +574,22 @@ footer {
     margin: 2%;
 }
 
+.formulario-reserva-form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario-contacto-form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .formulario-contacto
 {
     width: 50%;
@@ -622,7 +638,7 @@ footer {
     max-width: 20%;
 }
 
-.formulario-reserva-nombre-apellidos, .formulario-reserva-correo-telefono, .formulario-reserva-huespedes, .formulario-reserva-fechas, .formulario-reserva-habitaciones
+.formulario-reserva-nombre-apellidos, .formulario-reserva-correo-telefono, .formulario-reserva-huespedes, .formulario-reserva-fechas, .formulario-reserva-habitaciones, .formulario-reserva-extra, .formulario-contacto-extra
 {
     display: flex;
     flex-direction: row;
@@ -632,7 +648,7 @@ footer {
     width: 100%;
 }
 
-.formulario-reserva-nombre-apellidos input, .formulario-reserva-correo-telefono input, .formulario-reserva-huespedes input, .formulario-reserva-habitaciones input
+.formulario-reserva-nombre-apellidos input, .formulario-reserva-correo-telefono input, .formulario-reserva-huespedes input, .formulario-reserva-habitaciones input, .formulario-reserva-extra textarea, .formulario-contacto-extra textarea
 {
     border: none;
     border-bottom:2px solid #d1c05c;
@@ -641,6 +657,12 @@ footer {
     height: 30px;
     background-color: #f8f8f8;
     font-size: 18pt;
+}
+
+.formulario-reserva-extra textarea, .formulario-contacto-extra textarea
+{
+    min-height: 100pt;
+    resize: none;
 }
 
 .formulario-reserva-salida-input, .formulario-reserva-llegada-input
@@ -654,7 +676,7 @@ footer {
     font-size: 18pt;
 }
 
-.formulario-reserva-nombre-apellidos label, .formulario-reserva-correo-telefono label, .formulario-reserva-huespedes label
+.formulario-reserva-nombre-apellidos label, .formulario-reserva-correo-telefono label, .formulario-reserva-huespedes label,  .formulario-reserva-extra label, .formulario-contacto-extra label
 {
     font-size: 12pt;
     color: #aaa;
@@ -759,17 +781,19 @@ footer {
 .reserva
 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
 }
 
 .container-bienvenida
 {
     background-image: url("img/monasterio.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;    
     background-color: #cccccc;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-evenly;
 }
 
 .container-saludo
@@ -779,17 +803,21 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    min-width: 100%;
+    min-height: 100%;
+    margin: 10% 0;
 }
 
 .container-reserva 
 {
-    max-width: 90%;
-    margin: 10%;
+    max-width: 100%;
     padding: 3%;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 10% 0;
 }
 
 .fechas-reserva

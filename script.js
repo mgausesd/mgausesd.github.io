@@ -1,11 +1,18 @@
 
-// Obtener referencia al botón y al div oculto
+// Constantes
 const boton = document.getElementById('boton-menu');
 const divOculto = document.getElementById('mini-nav');
 const footer = document.getElementById('footer-container');
 const footerNav = document.getElementById('footer-nav');
 const footerBio = document.getElementById('footer-bio');
 const footerContacto = document.getElementById('footer-contacto');
+const formReserva = document.getElementById("formulario-reserva-form");
+const formContacto = document.getElementById("formulario-contacto-form");
+
+/** FUNCIONES ESENCIALES AL CARGAR */
+
+window.addEventListener('resize', verificarTamañoPantalla);
+
 // Función para cambiar el estado del div al hacer clic en el botón
 boton.addEventListener('click', function() {
   if (divOculto.style.display === 'none') {
@@ -15,8 +22,32 @@ boton.addEventListener('click', function() {
   }
 });
 
-// Verificar el tamaño de la pantalla y mostrar u ocultar el botón según sea necesario
+//Establecer idioma inicial
+document.addEventListener('DOMContentLoaded', function() {
+  let currentLanguage = 'es';
+  updateTexts(currentLanguage);
+  
+  // Obtener el select para el cambio de idioma
+  const languageSelect = document.getElementById('language-select');
+  if (languageSelect) {
+    languageSelect.addEventListener('change', changeLanguage);
+  }
+
+  //loader contacto
+  setFormularioContacto();
+});
+
+// Llamar a la función cuando la ventana se haya cargado
+window.addEventListener('load', ocultarElementos);
+
+// Llamar a la función al cargar la página y al cambiar el tamaño de la ventana
+verificarTamañoPantalla();
+
+setDates();
+
+
 function verificarTamañoPantalla() {
+  // Verificar el tamaño de la pantalla y mostrar u ocultar el botón según sea necesario
   if (window.innerWidth <= 768) { // Cambia este valor según el tamaño deseado
     boton.style.display = 'block';
     divOculto.style.display = 'none';
@@ -45,10 +76,6 @@ function verificarTamañoPantalla() {
     footerContacto.style.minWidth = '30%';
   }
 }
-
-// Llamar a la función al cargar la página y al cambiar el tamaño de la ventana
-verificarTamañoPantalla();
-window.addEventListener('resize', verificarTamañoPantalla);
 
 function submitReservation() {
   const checkinDate = document.getElementById('checkin').value;
@@ -80,21 +107,6 @@ function checkAvailability() {
   // Abre una nueva pestaña del navegador con la URL construida
   window.open(url, '_blank');
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-  // Establecer el idioma inicial
-  let currentLanguage = 'es';
-  updateTexts(currentLanguage);
-  
-  // Obtener el select para el cambio de idioma
-  const languageSelect = document.getElementById('language-select');
-  if (languageSelect) {
-    languageSelect.addEventListener('change', changeLanguage);
-  }
-
-  //loader contacto
-  setFormularioContacto();
-});
 
 function setFormularioContacto()
 {
@@ -150,34 +162,17 @@ function switchContactoClicked(button_id)
   }
 }
 
-function enviarEmail() {
-  const datosFormulario = {
-    nombre: document.getElementById('nombre').value,
-    correo: document.getElementById('formulario-reserva-correo-input').value,
-    mensaje: document.getElementById('mensaje').value
-  };
-
-  // Envía los datos al servidor
-  fetch('/enviar-email', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(datosFormulario)
-  })
-  .then(response => {
-    if (response.ok) {
-      console.log('Correo electrónico enviado exitosamente');
-      // Puedes hacer alguna acción adicional aquí, como mostrar un mensaje de éxito al usuario
-    } else {
-      console.error('Error al enviar el correo electrónico');
-      // Puedes manejar errores aquí, como mostrar un mensaje de error al usuario
-    }
-  })
-  .catch(error => {
-    console.error('Error de red:', error);
-    // Puedes manejar errores de red aquí, como mostrar un mensaje de error al usuario
-  });
+function formularioContactoSubmit(buttonId)
+{
+  switch(buttonId)
+  {
+    case "button-submit-reserva":
+      formReserva.submit();
+      break;
+    case "button-submit-contacto":
+      formContacto.submit();
+      break;
+  }
 }
   
 function changeLanguage() {
@@ -193,6 +188,64 @@ function updateTexts(language) {
       element.textContent = texts[language][textKey];
     }
   });
+}
+
+function setDates()
+{
+  var today = new Date();
+  var tomorrow = new Date();
+  var nextYear = new Date();
+
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  nextYear.setDate(tomorrow.getDate() + 365);
+
+  var today_dd = today.getDate();
+  var today_mm = today.getMonth() + 1; //January is 0!
+  var today_yyyy = today.getFullYear();
+
+  if (today_dd < 10) {
+    today_dd = '0' + today_dd;
+  }
+
+  if (today_mm < 10) {
+    today_mm = '0' + today_mm;
+  } 
+
+  var tomorrow_dd = tomorrow.getDate();
+  var tomorrow_mm = tomorrow.getMonth() + 1; //January is 0!
+  var tomorrow_yyyy = tomorrow.getFullYear();
+
+  if (tomorrow_dd < 10) {
+    tomorrow_dd = '0' + tomorrow_dd;
+  }
+
+  if (tomorrow_mm < 10) {
+    tomorrow_mm = '0' + tomorrow_mm;
+  } 
+
+  var nextyear_dd = nextYear.getDate();
+  var nextyear_mm = nextYear.getMonth() + 1; //January is 0!
+  var nextyear_yyyy = nextYear.getFullYear();
+
+  if (nextyear_dd < 10) {
+    nextyear_dd = '0' + nextyear_dd;
+  }
+
+  if (nextyear_mm < 10) {
+    nextyear_mm = '0' + nextyear_mm;
+  } 
+
+  today = today_yyyy + '-' + today_mm + '-' + today_dd;
+  tomorrow = tomorrow_yyyy + '-' + tomorrow_mm + '-' + tomorrow_dd;
+  nextYear = nextyear_yyyy + '-' + nextyear_mm + '-' + nextyear_dd;
+  document.getElementById("fechaEntrada").setAttribute("min", today);
+  document.getElementById("fechaSalida").setAttribute("min", tomorrow);
+
+  document.getElementById("fechaEntrada").setAttribute("max", nextYear);
+  document.getElementById("fechaSalida").setAttribute("max", nextYear);
+
+  document.getElementById("fechaEntrada").setAttribute("value", today);
+  document.getElementById("fechaSalida").setAttribute("value", tomorrow);
 }
 
 function onClickFaqButton(clickedId)
@@ -229,9 +282,6 @@ function saberMasButtonClick(url)
 {
   window.location.href = url;
 }
-
-// Llamar a la función cuando la ventana se haya cargado
-window.addEventListener('load', ocultarElementos);
 
 const texts = {
   "en": {

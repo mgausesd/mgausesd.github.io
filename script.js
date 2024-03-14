@@ -9,16 +9,26 @@ const footerContacto = document.getElementById('footer-contacto');
 const formReserva = document.getElementById("formulario-reserva-form");
 const formContacto = document.getElementById("formulario-contacto-form");
 
-const formLabelObligatorioNombre = document.getElementById("formulario-nombre-obligatorio");
-const formLabelObligatorioApellidos = document.getElementById("formulario-apellidos-obligatorio");
-const formLabelObligatorioCorreo = document.getElementById("formulario-email-obligatorio");
-const formLabelObligatorioAdultos = document.getElementById("formulario-adultos-obligatorio");
-const formLabelObligatorioLlegada = document.getElementById("formulario-llegada-obligatorio");
-const formLabelObligatorioSalida = document.getElementById("formulario-salida-obligatorio");
+const formLabelObligatorioReservaNombre = document.getElementById("formulario-nombre-obligatorio");
+const formLabelObligatorioReservaApellidos = document.getElementById("formulario-apellidos-obligatorio");
+const formLabelObligatorioReservaCorreo = document.getElementById("formulario-email-obligatorio");
+const formLabelObligatorioReservaAdultos = document.getElementById("formulario-adultos-obligatorio");
+const formLabelObligatorioReservaLlegada = document.getElementById("formulario-llegada-obligatorio");
+const formLabelObligatorioReservaSalida = document.getElementById("formulario-salida-obligatorio");
 
-const formInputNombre = document.getElementById("formulario-reserva-nombre-input");
-const formInputApellidos = document.getElementById("formulario-reserva-apellidos-input");
-const formInputCorreo = document.getElementById("formulario-reserva-correo-input");
+const formInputReservaNombre = document.getElementById("formulario-reserva-nombre-input");
+const formInputReservaApellidos = document.getElementById("formulario-reserva-apellidos-input");
+const formInputReservaCorreo = document.getElementById("formulario-reserva-correo-input");
+
+const formLabelObligatorioContactoNombre = document.getElementById("formulario-contacto-nombre-obligatorio");
+const formLabelObligatorioContactoApellidos = document.getElementById("formulario-contacto-apellidos-obligatorio");
+const formLabelObligatorioContactoCorreo = document.getElementById("formulario-contacto-email-obligatorio");
+
+const formInputContactoNombre = document.getElementById("formulario-contacto-nombre-input");
+const formInputContactoApellidos = document.getElementById("formulario-contacto-apellidos-input");
+const formInputContactoCorreo = document.getElementById("formulario-contacto-correo-input");
+
+
 
 /** FUNCIONES ESENCIALES AL CARGAR */
 
@@ -175,43 +185,70 @@ function switchContactoClicked(button_id)
 
 function formularioContactoSubmit(buttonId)
 {
-  var todoOk = true;
   var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-  if(formInputApellidos.value=='')
+  var todoOk = true;
+  switch(buttonId)
   {
-    formLabelObligatorioApellidos.style.display='block';
-    todoOk=false;
-  }
-  if(formInputNombre.value=='')
-  {
-    formLabelObligatorioNombre.style.display='block';
-    todoOk=false;
-  }
-  if(formInputCorreo.value=='')
-  {
-    formLabelObligatorioCorreo.style.display='block';
-    todoOk=false;
-  }
-  else
-  {
-    if(!formInputCorreo.value.match(validRegex))
-    {
-      formLabelObligatorioCorreo.style.display='block';
-      formLabelObligatorioCorreo.innerHTML ='Invalid/Inválido'
-      todoOk=false;
-    }
-  }
-  if(todoOk)
-  {
-    switch(buttonId)
-    {
-      case "button-submit-reserva":
+    case "button-submit-reserva":
+      if(formInputReservaApellidos.value=='')
+      {
+        formLabelObligatorioReservaApellidos.style.display='block';
+        todoOk=false;
+      }
+      if(formInputReservaNombre.value=='')
+      {
+        formLabelObligatorioReservaNombre.style.display='block';
+        todoOk=false;
+      }
+      if(formInputReservaCorreo.value=='')
+      {
+        formLabelObligatorioReservaCorreo.style.display='block';
+        todoOk=false;
+      }
+      else
+      {
+        if(!formInputReservaCorreo.value.match(validRegex))
+        {
+          formLabelObligatorioReservaCorreo.style.display='block';
+          formLabelObligatorioReservaCorreo.innerHTML ='Invalid/Inválido'
+          todoOk=false;
+        }
+      }
+      if(todoOk)
+      {
         formReserva.submit();
-        break;
-      case "button-submit-contacto":
+      }
+      break;
+    case "button-submit-contacto":
+      if(formInputContactoApellidos.value=='')
+      {
+        formLabelObligatorioContactoApellidos.style.display='block';
+        todoOk=false;
+      }
+      if(formInputContactoNombre.value=='')
+      {
+        formLabelObligatorioContactoNombre.style.display='block';
+        todoOk=false;
+      }
+      if(formInputContactoCorreo.value=='')
+      {
+        formLabelObligatorioContactoCorreo.style.display='block';
+        todoOk=false;
+      }
+      else
+      {
+        if(!formInputContactoCorreo.value.match(validRegex))
+        {
+          formLabelObligatorioContactoCorreo.style.display='block';
+          formLabelObligatorioContactoCorreo.innerHTML ='Invalid/Inválido'
+          todoOk=false;
+        }
+      }
+      if(todoOk)
+      {
         formContacto.submit();
-        break;
-    }
+      }
+      break;
   }
 }
   
@@ -316,12 +353,12 @@ function ocultarElementos() {
   elementos.forEach(function(elemento) {
     elemento.style.display = 'none';
   });
-  formLabelObligatorioNombre.style.display = 'none';
-  formLabelObligatorioApellidos.style.display = 'none';
-  formLabelObligatorioCorreo.style.display = 'none';
-  formLabelObligatorioLlegada.style.display = 'none';
-  formLabelObligatorioSalida.style.display = 'none';
-  formLabelObligatorioAdultos.style.display = 'none';
+  formLabelObligatorioReservaNombre.style.display = 'none';
+  formLabelObligatorioReservaApellidos.style.display = 'none';
+  formLabelObligatorioReservaCorreo.style.display = 'none';
+  formLabelObligatorioReservaLlegada.style.display = 'none';
+  formLabelObligatorioReservaSalida.style.display = 'none';
+  formLabelObligatorioReservaAdultos.style.display = 'none';
 }
 
 function saberMasButtonClick(url)
@@ -405,6 +442,9 @@ const texts = {
     "formulario-contacto-algo-mas":"Need something else?",
     "formulario-contacto-correo":"E-mail",
     "formulario-contacto-telefono":"Telephone",
+    "solicitar-reserva-button":"Request reservation",
+    "seccion-titulo-mapa":"Where we are?",
+    "solicitar-contacto-button":"Contact us",
   },
   "es": {
     "reserva-llegada": "Llegada",
@@ -479,5 +519,8 @@ const texts = {
     "formulario-contacto-algo-mas":"¿Necesitas algo más?",
     "formulario-contacto-correo":"Correo",
     "formulario-contacto-telefono":"Teléfono",
+    "solicitar-reserva-button":"Solicitar reserva",
+    "seccion-titulo-mapa":"¿Dónde estamos?",
+    "solicitar-contacto-button":"Contactar",
   }
 };

@@ -80,133 +80,133 @@
                     </div>
                 </div>
                 <div class="sep-line"></div>
-                    <div id="formulario-reserva" class="formulario-reserva">
-                        <form id="formulario-reserva-form" class="formulario-reserva-form"   action="https://formspree.io/f/xzbnvoyg" method="POST">
-                            <h2 data-text-key="seccion-titulo-formulario-reserva-datos-visita">
-                                Datos de la reserva
-                            </h2>
-                            <div class="sep-line"></div>
-                            <div class="formulario-reserva-datos-visita">
-                                <div class="formulario-reserva-fechas">
-                                    <div id="formulario-reserva-llegada" class="formulario-reserva-device">
-                                        <div style="display: flex; flex-direction: row; justify-content: space-between;">
-                                            <label for="formulario-reserva-llegada-label" data-text-key="formulario-reserva-llegada-hotel">
-                                                Llegada
-                                            </label>
-                                            <label id="formulario-llegada-obligatorio" class="formulario-campo-obligatorio" data-text-key="formulario-campo-obligatorio" style="color:red">Obligatorio</label>    
-                                        </div>
-                                        <input id="fechaEntrada" name="Fecha de llegada" class="formulario-reserva-llegada-input" type="date">
+                <div id="formulario-reserva" class="formulario-reserva">
+                    <form id="formulario-reserva-form" class="formulario-reserva-form"   action="https://formspree.io/f/xzbnvoyg" method="POST">
+                        <h2 data-text-key="seccion-titulo-formulario-reserva-datos-visita">
+                            Datos de la reserva
+                        </h2>
+                        <div class="sep-line"></div>
+                        <div class="formulario-reserva-datos-visita">
+                            <div class="formulario-reserva-fechas">
+                                <div id="formulario-reserva-llegada" class="formulario-reserva-device">
+                                    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                                        <label for="formulario-reserva-llegada-label" data-text-key="formulario-reserva-llegada-hotel">
+                                            Llegada
+                                        </label>
+                                        <label id="formulario-llegada-obligatorio" class="formulario-campo-obligatorio" data-text-key="formulario-campo-obligatorio" style="color:red; display: none;">Obligatorio</label>    
                                     </div>
-                                    <div id="formulario-reserva-salida" class="formulario-reserva-device">
-                                        <div style="display: flex; flex-direction: row; justify-content: space-between;">
-                                            <label for="formulario-reserva-salida-label" data-text-key="formulario-reserva-salida-hotel">
-                                                Salida
-                                            </label>
-                                            <label id="formulario-salida-obligatorio" class="formulario-campo-obligatorio" data-text-key="formulario-campo-obligatorio" style="color:red">Obligatorio</label>
-                                        </div>
-                                        <input id="fechaSalida" name="Fecha de salida" class="formulario-reserva-salida-input" type="date">
-                                    </div>
+                                    <input id="fechaEntrada" name="Fecha de llegada" class="formulario-reserva-llegada-input" type="date">
                                 </div>
-                                <div class="formulario-reserva-huespedes">
-                                    <div id="formulario-reserva-adultos" class="formulario-reserva-device">
-                                        <div style="display: flex; flex-direction: row; justify-content: space-between;">
-                                            <label for="formulario-reserva-adultos-label" data-text-key="reserva-adultos">
-                                                Adultos
-                                            </label>
-                                            <label id="formulario-adultos-obligatorio" class="formulario-campo-obligatorio" data-text-key="formulario-campo-obligatorio" style="color:red">Obligatorio</label>
-                                        </div>
-                                        <input id="formulario-reserva-adultos-input" name="Adultos" type="number" min="1" max="10" value="1">
-                                    </div>
-                                    <div id="formulario-reserva-menores" class="formulario-reserva-device">
-                                        <label for="formulario-reserva-menores-label" data-text-key="reserva-ninos">
-                                            Niños
+                                <div id="formulario-reserva-salida" class="formulario-reserva-device">
+                                    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                                        <label for="formulario-reserva-salida-label" data-text-key="formulario-reserva-salida-hotel">
+                                            Salida
                                         </label>
-                                        <input id="formulario-reserva-menores-input" name="Menores" type="number" min="0" max="10" value="0">
+                                        <label id="formulario-salida-obligatorio" class="formulario-campo-obligatorio" data-text-key="formulario-campo-obligatorio" style="color:red; display: none;">Obligatorio</label>
                                     </div>
-                                    <div class="formulario-reserva-mascotas">
-                                        <label for="formulario-reserva-mascotas-label" data-text-key="reserva-mascotas">
-                                            Mascotas
-                                        </label>
-                                        <input id="formulario-reserva-mascotas-input" name="Mascotas" type="checkbox">
-                                    </div>
-                                </div>
-                                <div class="formulario-reserva-habitaciones">
-                                    <div id="formulario-reserva-habitaciones-doble" class="formulario-reserva-device">
-                                        <label for="formulario-reserva-habitaciones-doble-label" data-text-key="reserva-tipo-habitacion-doble">
-                                            Doble
-                                        </label>
-                                        <input id="formulario-reserva-habitaciones-doble-input" name="Habitaciones dobles" type="number" min="0" max="10" value="0">
-                                    </div>
-                                    <div id="formulario-reserva-habitaciones-simple" class="formulario-reserva-device">
-                                        <label for="formulario-reserva-habitaciones-simple-label" data-text-key="reserva-tipo-habitacion-individual">
-                                            Individual
-                                        </label>
-                                        <input id="formulario-reserva-habitaciones-simple-input" name="Habitaciones simples" type="number" min="0" max="10" value="0">
-                                    </div>
-                                    <div id="formulario-reserva-habitaciones-triple" class="formulario-reserva-device">
-                                        <label for="formulario-reserva-habitaciones-triple-label" data-text-key="reserva-tipo-habitacion-triple">
-                                            Triple
-                                        </label>
-                                        <input id="formulario-reserva-habitaciones-triple-input" name="Habitaciones triples" type="number" min="0" max="10" value="0">
-                                    </div>
+                                    <input id="fechaSalida" name="Fecha de salida" class="formulario-reserva-salida-input" type="date">
                                 </div>
                             </div>
-                            <div class="sep-line"></div>
-                            <h2 data-text-key="seccion-titulo-formulario-reserva-datos-visita-contacto" data-text-key="seccion-titulo-formulario-contacto">
-                                Datos de contacto
-                            </h2>
-                            <div class="sep-line"></div>
-                            <div class="formulario-reserva-datos-contacto">
-                                <div class="formulario-reserva-nombre-apellidos">
-                                    <div id="formulario-reserva-nombre" class="formulario-reserva-device">
-                                        <div style="display: flex; flex-direction: row; justify-content: space-between;">
-                                            <label for="formulario-reserva-nombre-label" data-text-key="formulario-contacto-nombre">
-                                                Nombre
-                                            </label>
-                                            <label id="formulario-nombre-obligatorio" class="formulario-campo-obligatorio" data-text-key="formulario-campo-obligatorio" style="color:red">Obligatorio</label>
-                                        </div>
-                                        <input id="formulario-reserva-nombre-input" name="Nombre">
-                                    </div>
-                                    <div id="formulario-reserva-apellidos" class="formulario-reserva-device">
-                                        <div style="display: flex; flex-direction: row; justify-content: space-between;">
-                                            <label id="formulario-reserva-apellidos-label" data-text-key="formulario-contacto-apellidos">
-                                                Apellidos
-                                            </label>
-                                            <label id="formulario-apellidos-obligatorio" class="formulario-campo-obligatorio" data-text-key="formulario-campo-obligatorio" style="color:red">Obligatorio</label>
-                                        </div>
-                                        <input id="formulario-reserva-apellidos-input" name="Apellidos">
-                                    </div>
-                                </div>
-                                <div class="formulario-reserva-correo-telefono">
-                                    <div id="formulario-reserva-correo" class="formulario-reserva-device">
-                                        <div style="display: flex; flex-direction: row; justify-content: space-between;">
-                                            <label for="formulario-reserva-correo-label" data-text-key="formulario-contacto-correo">
-                                                Correo electrónico
-                                            </label>
-                                            <label id="formulario-email-obligatorio" class="formulario-campo-obligatorio" data-text-key="formulario-campo-obligatorio" style="color:red">Obligatorio</label>
-                                        </div>
-                                        <input type="email" name="email" id="formulario-reserva-correo-input">
-                                    </div>
-                                    <div id="formulario-reserva-telefono" class="formulario-reserva-device">
-                                        <label id="formulario-reserva-telefono-label" data-text-key="formulario-contacto-telefono">
-                                            Teléfono
+                            <div class="formulario-reserva-huespedes">
+                                <div id="formulario-reserva-adultos" class="formulario-reserva-device">
+                                    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                                        <label for="formulario-reserva-adultos-label" data-text-key="reserva-adultos">
+                                            Adultos
                                         </label>
-                                        <input id="formulario-reserva-telefono-input" name="Telefono">
+                                        <label id="formulario-adultos-obligatorio" class="formulario-campo-obligatorio" data-text-key="formulario-campo-obligatorio" style="color:red; display: none;">Obligatorio</label>
                                     </div>
+                                    <input id="formulario-reserva-adultos-input" name="Adultos" type="number" min="1" max="10" value="1">
                                 </div>
-                                <div class="formulario-reserva-extra">
-                                    <div id="formulario-reserva-extra-datos" class="formulario-reserva-device">
-                                        <label for="formulario-reserva-habitaciones-triple-label" data-text-key="formulario-contacto-algo-mas">
-                                            ¿Necesitas algo más?
-                                        </label>
-                                        <textarea id="formulario-reserva-extra-datos-input"  name="mensaje"></textarea>
-                                    </div>
+                                <div id="formulario-reserva-menores" class="formulario-reserva-device">
+                                    <label for="formulario-reserva-menores-label" data-text-key="reserva-ninos">
+                                        Niños
+                                    </label>
+                                    <input id="formulario-reserva-menores-input" name="Menores" type="number" min="0" max="10" value="0">
+                                </div>
+                                <div class="formulario-reserva-mascotas">
+                                    <label for="formulario-reserva-mascotas-label" data-text-key="reserva-mascotas">
+                                        Mascotas
+                                    </label>
+                                    <input id="formulario-reserva-mascotas-input" name="Mascotas" type="checkbox">
                                 </div>
                             </div>
-                            <div class="sep-line"></div>
-                            <div id="button-submit-reserva" onclick="formularioContactoSubmit(this.id)"  data-text-key="solicitar-reserva-button" class="button-saber-mas">Solicitar reserva</div>
-                        </form>
-                    </div>
+                            <div class="formulario-reserva-habitaciones">
+                                <div id="formulario-reserva-habitaciones-doble" class="formulario-reserva-device">
+                                    <label for="formulario-reserva-habitaciones-doble-label" data-text-key="reserva-tipo-habitacion-doble">
+                                        Doble
+                                    </label>
+                                    <input id="formulario-reserva-habitaciones-doble-input" name="Habitaciones dobles" type="number" min="0" max="10" value="0">
+                                </div>
+                                <div id="formulario-reserva-habitaciones-simple" class="formulario-reserva-device">
+                                    <label for="formulario-reserva-habitaciones-simple-label" data-text-key="reserva-tipo-habitacion-individual">
+                                        Individual
+                                    </label>
+                                    <input id="formulario-reserva-habitaciones-simple-input" name="Habitaciones simples" type="number" min="0" max="10" value="0">
+                                </div>
+                                <div id="formulario-reserva-habitaciones-triple" class="formulario-reserva-device">
+                                    <label for="formulario-reserva-habitaciones-triple-label" data-text-key="reserva-tipo-habitacion-triple">
+                                        Triple
+                                    </label>
+                                    <input id="formulario-reserva-habitaciones-triple-input" name="Habitaciones triples" type="number" min="0" max="10" value="0">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sep-line"></div>
+                        <h2 data-text-key="seccion-titulo-formulario-reserva-datos-visita-contacto" data-text-key="seccion-titulo-formulario-contacto">
+                            Datos de contacto
+                        </h2>
+                        <div class="sep-line"></div>
+                        <div class="formulario-reserva-datos-contacto">
+                            <div class="formulario-reserva-nombre-apellidos">
+                                <div id="formulario-reserva-nombre" class="formulario-reserva-device">
+                                    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                                        <label for="formulario-reserva-nombre-label" data-text-key="formulario-contacto-nombre">
+                                            Nombre
+                                        </label>
+                                        <label id="formulario-nombre-obligatorio" class="formulario-campo-obligatorio" data-text-key="formulario-campo-obligatorio" style="color:red; display: none;">Obligatorio</label>
+                                    </div>
+                                    <input id="formulario-reserva-nombre-input" name="Nombre">
+                                </div>
+                                <div id="formulario-reserva-apellidos" class="formulario-reserva-device">
+                                    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                                        <label id="formulario-reserva-apellidos-label" data-text-key="formulario-contacto-apellidos">
+                                            Apellidos
+                                        </label>
+                                        <label id="formulario-apellidos-obligatorio" class="formulario-campo-obligatorio" data-text-key="formulario-campo-obligatorio" style="color:red; display: none;">Obligatorio</label>
+                                    </div>
+                                    <input id="formulario-reserva-apellidos-input" name="Apellidos">
+                                </div>
+                            </div>
+                            <div class="formulario-reserva-correo-telefono">
+                                <div id="formulario-reserva-correo" class="formulario-reserva-device">
+                                    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                                        <label for="formulario-reserva-correo-label" data-text-key="formulario-contacto-correo">
+                                            Correo electrónico
+                                        </label>
+                                        <label id="formulario-email-obligatorio" class="formulario-campo-obligatorio" data-text-key="formulario-campo-obligatorio" style="color:red; display: none;">Obligatorio</label>
+                                    </div>
+                                    <input type="email" name="email" id="formulario-reserva-correo-input">
+                                </div>
+                                <div id="formulario-reserva-telefono" class="formulario-reserva-device">
+                                    <label id="formulario-reserva-telefono-label" data-text-key="formulario-contacto-telefono">
+                                        Teléfono
+                                    </label>
+                                    <input id="formulario-reserva-telefono-input" name="Telefono">
+                                </div>
+                            </div>
+                            <div class="formulario-reserva-extra">
+                                <div id="formulario-reserva-extra-datos" class="formulario-reserva-device">
+                                    <label for="formulario-reserva-habitaciones-triple-label" data-text-key="formulario-contacto-algo-mas">
+                                        ¿Necesitas algo más?
+                                    </label>
+                                    <textarea id="formulario-reserva-extra-datos-input"  name="mensaje"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sep-line"></div>
+                        <div id="button-submit-reserva" onclick="formularioContactoSubmit(this.id)"  data-text-key="solicitar-reserva-button" class="button-saber-mas">Solicitar reserva</div>
+                    </form>
+                </div>
                 <div id="formulario-contacto" class="formulario-contacto">
                     <form id="formulario-contacto-form" class="formulario-contacto-form"   action="https://formspree.io/f/xeqyznvz" method="POST">
                         <h2 data-text-key="seccion-titulo-formulario-reserva-datos-visita">
@@ -216,27 +216,33 @@
                         <div class="formulario-reserva-datos-contacto">
                             <div class="formulario-reserva-nombre-apellidos">
                                 <div id="formulario-reserva-nombre" class="formulario-reserva-device">
-                                    <label for="formulario-reserva-nombre-label">
-                                        Nombre
-                                        <span style="color:red">*</span>
-                                    </label>
-                                    <input name="Nombre" id="formulario-reserva-nombre-input">
+                                    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                                        <label for="formulario-reserva-nombre-label">
+                                            Nombre
+                                        </label>
+                                        <label id="formulario-contacto-nombre-obligatorio" class="formulario-campo-obligatorio" data-text-key="formulario-campo-obligatorio" style="color:red; display:none;">Obligatorio</label>    
+                                    </div>
+                                    <input name="Nombre" id="formulario-contacto-nombre-input">
                                 </div>
                                 <div id="formulario-reserva-apellidos" class="formulario-reserva-device">
-                                    <label id="formulario-reserva-apellidos-label">
-                                        Apellidos
-                                        <span style="color:red">*</span>
-                                    </label>
-                                    <input name="Apellidos" id="formulario-reserva-apellidos-input">
+                                    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                                        <label id="formulario-reserva-apellidos-label">
+                                            Apellidos
+                                        </label>
+                                        <label id="formulario-contacto-apellidos-obligatorio" class="formulario-campo-obligatorio" data-text-key="formulario-campo-obligatorio" style="color:red; display: none;">Obligatorio</label>    
+                                    </div>
+                                    <input name="Apellidos" id="formulario-contacto-apellidos-input">
                                 </div>
                             </div>
                             <div class="formulario-reserva-correo-telefono">
                                 <div id="formulario-reserva-correo" class="formulario-reserva-device">
-                                    <label for="formulario-reserva-correo-label">
-                                        Correo electrónico
-                                        <span style="color:red">*</span>
-                                    </label>
-                                    <input type="email" name="email" id="formulario-reserva-correo-input">
+                                    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                                        <label for="formulario-reserva-correo-label">
+                                            Correo electrónico
+                                        </label>
+                                        <label id="formulario-contacto-email-obligatorio" class="formulario-campo-obligatorio" data-text-key="formulario-campo-obligatorio" style="color:red; display: none;">Obligatorio</label>     
+                                    </div>
+                                    <input type="email" name="email" id="formulario-contacto-correo-input">
                                 </div>
                                 <div id="formulario-reserva-telefono" class="formulario-reserva-device">
                                     <label id="formulario-reserva-telefono-label">
@@ -265,7 +271,7 @@
 
             <div class="ubicacion">
                 <div class="seccion-titulo">
-                    <h1 class="servicios-item-titulo" data-text-key="seccion-titulo-contacto">
+                    <h1 class="servicios-item-titulo" data-text-key="seccion-titulo-mapa">
                         Dónde estamos
                     </h1>
                 </div>

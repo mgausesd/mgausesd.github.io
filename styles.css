@@ -533,16 +533,19 @@ footer {
     flex-direction: row;
     border: 3px solid #d1c05c;
     margin: 2% 0;
+    width: 33%;
 }
 
 .boton-switch-formulario-reservar, .boton-switch-formulario-otros
 {
-    padding: 2%;
+    padding: 2%;/*
     align-content: center;
     justify-content: center;
-    justify-items: center;
+    justify-items: center;*/
     text-align: center;
     cursor: pointer;
+    margin: none;
+    width: 50%;
 }
 
 .boton-switch-formulario-reservar:hover, .boton-switch-formulario-otros:hover
@@ -643,8 +646,8 @@ footer {
     display: flex;
     flex-direction: row;
     margin: 1%;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-end;
+    justify-content: space-around;
     width: 100%;
 }
 
@@ -670,13 +673,19 @@ footer {
     border: none;
     border-bottom:2px solid #d1c05c;
     outline: none;
-    width: 100%;
+    width: 98%;
     height: 30px;
     background-color: #f8f8f8;
     font-size: 18pt;
 }
 
-.formulario-reserva-nombre-apellidos label, .formulario-reserva-correo-telefono label, .formulario-reserva-huespedes label,  .formulario-reserva-extra label, .formulario-contacto-extra label
+.formulario-reserva-fechas label, 
+.formulario-reserva-huespedes label,  
+.formulario-reserva-habitaciones label,
+.formulario-reserva-nombre-apellidos label, 
+.formulario-reserva-correo-telefono label, 
+.formulario-reserva-extra label,
+.formulario-contacto-extra label
 {
     font-size: 12pt;
     color: #aaa;

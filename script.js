@@ -9,6 +9,17 @@ const footerContacto = document.getElementById('footer-contacto');
 const formReserva = document.getElementById("formulario-reserva-form");
 const formContacto = document.getElementById("formulario-contacto-form");
 
+const formLabelObligatorioNombre = document.getElementById("formulario-nombre-obligatorio");
+const formLabelObligatorioApellidos = document.getElementById("formulario-apellidos-obligatorio");
+const formLabelObligatorioCorreo = document.getElementById("formulario-email-obligatorio");
+const formLabelObligatorioAdultos = document.getElementById("formulario-adultos-obligatorio");
+const formLabelObligatorioLlegada = document.getElementById("formulario-llegada-obligatorio");
+const formLabelObligatorioSalida = document.getElementById("formulario-salida-obligatorio");
+
+const formInputNombre = document.getElementById("formulario-reserva-nombre-input");
+const formInputApellidos = document.getElementById("formulario-reserva-apellidos-input");
+const formInputCorreo = document.getElementById("formulario-reserva-correo-input");
+
 /** FUNCIONES ESENCIALES AL CARGAR */
 
 window.addEventListener('resize', verificarTamañoPantalla);
@@ -164,14 +175,43 @@ function switchContactoClicked(button_id)
 
 function formularioContactoSubmit(buttonId)
 {
-  switch(buttonId)
+  var todoOk = true;
+  var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  if(formInputApellidos.value=='')
   {
-    case "button-submit-reserva":
-      formReserva.submit();
-      break;
-    case "button-submit-contacto":
-      formContacto.submit();
-      break;
+    formLabelObligatorioApellidos.style.display='block';
+    todoOk=false;
+  }
+  if(formInputNombre.value=='')
+  {
+    formLabelObligatorioNombre.style.display='block';
+    todoOk=false;
+  }
+  if(formInputCorreo.value=='')
+  {
+    formLabelObligatorioCorreo.style.display='block';
+    todoOk=false;
+  }
+  else
+  {
+    if(!formInputCorreo.value.match(validRegex))
+    {
+      formLabelObligatorioCorreo.style.display='block';
+      formLabelObligatorioCorreo.innerHTML ='Invalid/Inválido'
+      todoOk=false;
+    }
+  }
+  if(todoOk)
+  {
+    switch(buttonId)
+    {
+      case "button-submit-reserva":
+        formReserva.submit();
+        break;
+      case "button-submit-contacto":
+        formContacto.submit();
+        break;
+    }
   }
 }
   
@@ -276,6 +316,12 @@ function ocultarElementos() {
   elementos.forEach(function(elemento) {
     elemento.style.display = 'none';
   });
+  formLabelObligatorioNombre.style.display = 'none';
+  formLabelObligatorioApellidos.style.display = 'none';
+  formLabelObligatorioCorreo.style.display = 'none';
+  formLabelObligatorioLlegada.style.display = 'none';
+  formLabelObligatorioSalida.style.display = 'none';
+  formLabelObligatorioAdultos.style.display = 'none';
 }
 
 function saberMasButtonClick(url)
@@ -289,6 +335,10 @@ const texts = {
     "reserva-salida": "Check-out",
     "reserva-adultos": "Adults",
     "reserva-ninos": "Children",
+    "reserva-mascotas":"Pets",
+    "reserva-tipo-habitacion-triple":"Triple",
+    "reserva-tipo-habitacion-doble":"Double",
+    "reserva-tipo-habitacion-individual":"Single",
     "reserva-boton": "Check for availability",
     "bienvenida": "Welcome at Hotel Borja",
     "bienvenida-caption": "Your stay here is one-click far.",
@@ -342,12 +392,26 @@ const texts = {
     "servicios-item-parrafo-television":"Tune in with your favourite content from our rooms and enjoy of shows, movies and more.",
     "servicios-item-parrafo-atencion":"Our staff will attend you, enjoy your stay.",
     "servicios-item-parrafo-climatizacion":"Feel good setting your room's temperature.",
+    "formulario-reserva-llegada-hotel":"Check-in",
+    "formulario-reserva-salida-hotel":"Check-out",
+    "seccion-titulo-formulario-reserva-datos-visita":"Booking data",
+    "seccion-titulo-formulario-reserva-datos-visita-contacto":"Contact data",
+    "boton-switch-formulario-otros":"Other topics",
+    "boton-switch-formulario-reservar":"Make a reservation",
+    "seccion-titulo-contacto":"How can we help you?",
+    "seccion-titulo-formulario-contacto":"Contact data",
+    "formulario-contacto-nombre":"Name",
+    "formulario-contacto-apellidos":"Surnames",
+    "formulario-contacto-algo-mas":"Need something else?",
+    "formulario-contacto-correo":"E-mail",
+    "formulario-contacto-telefono":"Telephone",
   },
   "es": {
     "reserva-llegada": "Llegada",
     "reserva-salida": "Salida",
     "reserva-adultos": "Adultos",
     "reserva-ninos": "Niños",
+    "reserva-mascotas":"Mascotas",
     "reserva-boton": "Comprobar disponibilidad",
     "bienvenida": "Bienvenidos al Hotel Borja",
     "bienvenida-caption": "Tu estancia en nuestro alojamiento está a un click",
@@ -399,5 +463,21 @@ const texts = {
     "servicios-item-parrafo-television":"Sintoniza con tu contenido favorito desde una de nuestras habitaciones y disfruta de entretenimiento visual.",
     "servicios-item-parrafo-atencion":"Nuestro personal se encarga de todo, tu disfruta.",
     "servicios-item-parrafo-climatizacion":"Siéntete agusto en nuestras habitaciones adaptando la temperatura de tu habitación.",
+    "formulario-reserva-llegada-hotel":"Llegada",
+    "formulario-reserva-salida-hotel":"Salida",
+    "seccion-titulo-formulario-reserva-datos-visita":"Datos de la reserva",
+    "seccion-titulo-formulario-reserva-datos-visita-contacto":"Datos de contacto",
+    "boton-switch-formulario-otros":"Otras cuestiones",
+    "boton-switch-formulario-reservar":"Quiero reservar",
+    "seccion-titulo-contacto":"¿En qué podemos ayudarte?",
+    "reserva-tipo-habitacion-triple":"Triple",
+    "reserva-tipo-habitacion-doble":"Doble",
+    "reserva-tipo-habitacion-individual":"Individual",
+    "seccion-titulo-formulario-contacto":"Datos de contacto",
+    "formulario-contacto-nombre":"Nombre",
+    "formulario-contacto-apellidos":"Apellidos",
+    "formulario-contacto-algo-mas":"¿Necesitas algo más?",
+    "formulario-contacto-correo":"Correo",
+    "formulario-contacto-telefono":"Teléfono",
   }
 };

@@ -210,7 +210,7 @@ function formularioContactoSubmit(buttonId)
         if(!formInputReservaCorreo.value.match(validRegex))
         {
           formLabelObligatorioReservaCorreo.style.display='block';
-          formLabelObligatorioReservaCorreo.innerHTML ='Invalid/Inválido'
+          formLabelObligatorioReservaCorreo.innerHTML = texts[document.getElementById('language-select').value]['formulario-campo-invalido'];
           todoOk=false;
         }
       }
@@ -240,7 +240,7 @@ function formularioContactoSubmit(buttonId)
         if(!formInputContactoCorreo.value.match(validRegex))
         {
           formLabelObligatorioContactoCorreo.style.display='block';
-          formLabelObligatorioContactoCorreo.innerHTML ='Invalid/Inválido'
+          formLabelObligatorioContactoCorreo.innerHTML = texts[document.getElementById('language-select').value]['formulario-campo-invalido'];
           todoOk=false;
         }
       }
@@ -445,6 +445,8 @@ const texts = {
     "solicitar-reserva-button":"Request reservation",
     "seccion-titulo-mapa":"Where we are?",
     "solicitar-contacto-button":"Contact us",
+    "formulario-campo-obligatorio":"Mandatory",
+    "formulario-campo-invalido":"Not valid"
   },
   "es": {
     "reserva-llegada": "Llegada",
@@ -522,5 +524,7 @@ const texts = {
     "solicitar-reserva-button":"Solicitar reserva",
     "seccion-titulo-mapa":"¿Dónde estamos?",
     "solicitar-contacto-button":"Contactar",
+    "formulario-campo-obligatorio":"Obligatorio",
+    "formulario-campo-invalido":"No válido",
   }
 };

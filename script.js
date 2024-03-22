@@ -315,14 +315,14 @@ function setDates()
   today = today_yyyy + '-' + today_mm + '-' + today_dd;
   tomorrow = tomorrow_yyyy + '-' + tomorrow_mm + '-' + tomorrow_dd;
   nextYear = nextyear_yyyy + '-' + nextyear_mm + '-' + nextyear_dd;
-  document.getElementById("fechaEntrada").setAttribute("min", today);
-  document.getElementById("fechaSalida").setAttribute("min", tomorrow);
+  document.getElementById("checkin").setAttribute("min", today);
+  document.getElementById("checkout").setAttribute("min", tomorrow);
 
-  document.getElementById("fechaEntrada").setAttribute("max", nextYear);
-  document.getElementById("fechaSalida").setAttribute("max", nextYear);
+  document.getElementById("checkin").setAttribute("max", nextYear);
+  document.getElementById("checkout").setAttribute("max", nextYear);
 
-  document.getElementById("fechaEntrada").setAttribute("value", today);
-  document.getElementById("fechaSalida").setAttribute("value", tomorrow);
+  document.getElementById("checkin").setAttribute("value", today);
+  document.getElementById("checkout").setAttribute("value", tomorrow);
 }
 
 function onClickFaqButton(clickedId)
@@ -367,7 +367,8 @@ function saberMasButtonClick(url)
 }
 
 const texts = {
-  "en": {
+  "en": 
+  {
     "reserva-llegada": "Check-in",
     "reserva-salida": "Check-out",
     "reserva-adultos": "Adults",
@@ -446,9 +447,10 @@ const texts = {
     "seccion-titulo-mapa":"Where we are?",
     "solicitar-contacto-button":"Contact us",
     "formulario-campo-obligatorio":"Mandatory",
-    "formulario-campo-invalido":"Not valid"
+    "formulario-campo-invalido":"Not valid",
   },
-  "es": {
+  "es": 
+  {
     "reserva-llegada": "Llegada",
     "reserva-salida": "Salida",
     "reserva-adultos": "Adultos",

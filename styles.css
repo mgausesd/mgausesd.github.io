@@ -241,6 +241,51 @@ nav ul li a:hover
         background-size: cover;    
         border: 2px solid #000;
     }
+
+    .reserva
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        min-width: 100%;
+        margin: 0 15%;
+        justify-content: center;
+    }
+
+    .container-saludo
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        min-width: 50%;
+        min-height: 100%;
+        margin: 10% 0;
+    }
+
+    .container-saludo p
+    {
+        min-height: 20%;
+    }
+
+    .container-saludo h1
+    {
+        min-height: 80%;
+    }
+
+    .container-reserva 
+    {
+        max-width: 100%;
+        padding: 3%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10% 0;
+    }
+
 }
 
 @media(max-width: 768px)
@@ -349,6 +394,37 @@ nav ul li a:hover
         background-repeat: no-repeat;
         border: 2px solid #000;
     }
+
+    .reserva
+    {
+        flex-direction: column;
+        margin: 10% 0;
+    }
+
+    .container-saludo
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        min-width: 50%;
+        min-height: 100%;
+        margin: 0;
+        padding: 5%;
+    }
+
+    .container-reserva 
+    {
+        max-width: 100%;
+        padding: 3%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
 }
 
 /* Contenedor principal */
@@ -377,7 +453,7 @@ footer {
     flex-direction: row;
     justify-content: center;
     max-width: 75%;
-    font-size: 16pt;
+    font-size: 12pt;
 }
 
 .footer-nav, .footer-contacto, .footer-bio
@@ -786,47 +862,26 @@ footer {
 }
 
 /* || CONTENIDO INICIO */
-
+/*
 .reserva
 {
     display: flex;
-    flex-direction: row;
     align-items: center;
+    min-width: 100%;
+    margin: 0 15%;
+    justify-content: center;
 }
-
+*/
 .container-bienvenida
 {
-    background-image: url("img/monasterio.jpg") ;
+    background-image: url("img/monasterio.jpg");
     background-repeat: no-repeat;
-    background-size: cover;    
+    background-size: cover;
     background-color: #cccccc;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
-}
-
-.container-saludo
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    min-width: 100%;
-    min-height: 100%;
-    margin: 10% 0;
-}
-
-.container-reserva 
-{
-    max-width: 100%;
-    padding: 3%;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10% 0;
 }
 
 .fechas-reserva
